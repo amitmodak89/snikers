@@ -1,0 +1,226 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/THEME_BROWN"
+    tools:context="com.mars.snickers.Fragment_Form" >
+
+    <RelativeLayout
+        android:id="@+id/linearLayout_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/gap" >
+
+        <TextView
+            android:id="@+id/ff_tv_headerNotice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:text="@string/form_header"
+            android:layout_marginTop="20dip"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/THEME_LIGHT_YELLOW" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wood"
+            android:orientation="vertical"
+            android:padding="@dimen/gap"
+            android:layout_below="@id/ff_tv_headerNotice"
+             >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/ff_et_surname"
+                    style="@style/edittext_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/gapx0.25"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/formSurnameHint"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@android:color/white" />
+
+                <EditText
+                    android:id="@+id/ff_et_name"
+                    style="@style/edittext_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gapx0.25"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/formNameHint"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ff_ll_datepicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/ff_tv_dd"
+                    style="@style/edittext_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/gapx0.25"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/dd"
+                    android:textColorHint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/ff_tv_mm"
+                    style="@style/edittext_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/mm"
+                    android:textColorHint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/ff_tv_yyyy"
+                    style="@style/edittext_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gapx0.25"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/yyyy"
+                    android:textColorHint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/ff_tv_dob"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/dob"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/THEME_DARK_BROWN"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/ff_et_email"
+                style="@style/edittext_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap"
+                android:ems="10"
+                android:hint="@string/formEmailHint"
+                android:inputType="textEmailAddress" />
+
+            <RelativeLayout
+                style="@style/edittext_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/gapx0.5"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/ff_et_mobileNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/gapx0.25"
+                    android:layout_toLeftOf="@+id/ff_tv_preMobileNo"
+                    android:background="@null"
+                    android:ems="10"
+                    android:maxLength="10"
+                    android:hint="@string/formMobileNo"
+                    android:inputType="phone"
+                    android:textColor="@color/THEME_YELLOW"
+                    android:textColorHint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/ff_tv_preMobileNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="+90"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/THEME_YELLOW"
+                    android:textSize="@dimen/gap"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/ff_et_addr"
+                style="@style/edittext_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gapx0.5"
+                android:ems="10"
+                android:hint="@string/formAddress"
+                android:inputType="textMultiLine"
+                android:maxHeight="@dimen/gapx5" />
+
+            <Spinner
+                android:id="@+id/ff_sp_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/gap"
+                android:background="@drawable/dropdownfield" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/ff_btn_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/gap"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:text="@string/formSubmitButton" />
+
+                <CheckBox
+                    android:id="@+id/ff_cb_agree"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/legalAcceptance"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/AMIT_THEME_BLACK"
+                    android:textSize="@dimen/gapx0.75" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ff_tv_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:paddingTop="@dimen/gap"
+            android:text="@string/formMandatory"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/THEME_LIGHT_YELLOW"
+            android:layout_below="@id/linearLayout"
+            android:textSize="@dimen/gapx0.75" />
+</RelativeLayout>
+</ScrollView>

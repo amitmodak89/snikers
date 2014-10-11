@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/choose_mood_sad"
+        android:icon="@drawable/prop_sad"
+        android:orderInCategory="1"
+        android:title="@string/sad"
+        app:showAsAction="always|withText"/>
+    <item
+        android:id="@+id/choose_mood_crazy"
+        android:icon="@drawable/prop_crazy"
+        android:orderInCategory="2"
+        android:title="@string/crazy"
+        app:showAsAction="always|withText"/>
+    <item
+        android:id="@+id/choose_mood_clumpsy"
+        android:icon="@drawable/prop_clumpsy"
+        android:orderInCategory="3"
+        android:title="@string/clumpsy"
+        app:showAsAction="always|withText"/>
+    <item
+        android:id="@+id/choose_mood_irritated"
+        android:icon="@drawable/prop_irritated"
+        android:orderInCategory="4"
+        android:title="@string/irritated"
+        app:showAsAction="always|withText"/>
+
+</menu>

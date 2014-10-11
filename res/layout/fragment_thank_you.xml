@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/THEME_BROWN"
+    android:orientation="vertical"
+    tools:context="com.mars.snickers.Fragment_ThankYou">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_above="@+id/fty_bottomBar"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/gap">
+
+                <TextView
+                    android:id="@+id/fty_tv_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/thankYouHeader_amit"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/AMIT_THEME_LIGHT_PINK"
+                     />
+
+                <TextView
+                    android:id="@+id/fty_tv_name_amit"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dip"
+                    android:layout_marginTop="@dimen/gap"
+                    android:background="@drawable/small_wood_amit"
+                    android:gravity="center"
+                    android:padding="@dimen/gap"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/THEME_BROWN"
+                    android:textSize="@dimen/gapx2"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fty_tv_thankYouMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/gapx5"
+                    android:text="@string/thankYouMessage_amit"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/AMIT_THEME_LIGHT_PINK"
+                    android:textStyle="bold" />
+
+                <!-- <TextView
+                    android:id="@+id/fty_tv_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/gapx1.5"
+                    android:text="@string/share"
+                    android:textColor="@color/THEME_YELLOW"
+                    android:textAppearance="?android:attr/textAppearanceSmall" /> -->
+
+                
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fty_bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/AMIT_THEME_BROWN_BG"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/fty_btn_playGame"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="5dip"
+            android:background="@color/THEME_LIGHT_BROWN"
+            android:drawablePadding="@dimen/gapx0.25"
+            android:drawableTop="@drawable/playagain"
+            android:padding="@dimen/gapx0.5"
+            android:text="@string/playTheGame"
+            android:textColor="@color/THEME_LIGHT_YELLOW" />
+
+        <Button
+            android:id="@+id/fty_btn_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_margin="5dip"
+            android:background="@color/THEME_LIGHT_BROWN"
+            android:drawablePadding="@dimen/gapx0.25"
+            android:drawableTop="@drawable/home_icon"
+            android:padding="@dimen/gapx0.5"
+            android:text="@string/home"
+            android:textColor="@color/THEME_LIGHT_YELLOW" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayoutShare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:layout_above="@id/fty_bottomBar"
+                    
+                    android:orientation="horizontal"
+                    android:padding="@dimen/gap">
+
+                    <ImageView
+                        android:id="@+id/fty_iv_facebook"
+                        android:layout_width="wrap_content"
+                        
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/gap"
+                        android:background="@color/AMIT_THEME_BROWN_BG"
+                        android:src="@drawable/fb" />
+
+                    <ImageView
+                        android:id="@+id/fty_iv_twitter"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="50dip"
+                        android:layout_height="wrap_content"
+                        android:background="@color/AMIT_THEME_BROWN_BG"
+                        android:src="@drawable/twitter" />
+                </LinearLayout>
+<TextView
+                android:id="@+id/ffs_tv_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/share"
+                android:layout_marginTop="@dimen/gapx0.5"
+                android:layout_above="@id/linearLayoutShare"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/AMIT_THEME_DARK_ORANGE" />
+</RelativeLayout>

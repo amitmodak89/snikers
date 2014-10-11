@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/THEME_BROWN"
+    android:padding="@dimen/gap"
+    tools:context="com.mars.snickers.Fragment_CampaignGameOption" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/fcgo_tv_pickOptionHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/pickOptionHeaderText"
+                android:textSize="28dip"
+                android:textColor="@color/AMIT_THEME_DARK_ORANGE"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/small_wood_amit"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical"
+                android:padding="@dimen/gap" >
+
+                <TextView
+                    android:id="@+id/fcgo_tv_campaignParticipationHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/participateCampaignHeader"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/THEME_BROWN" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/gap"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/fcgo_btn_howToParticipate"
+                        style="@style/button_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_vertical|center_horizontal"
+                        android:layout_marginRight="@dimen/gapx1.5"
+
+                        android:background="@drawable/button_background"
+                        android:gravity="center|center_vertical|center_horizontal"
+                        android:text="@string/howToParticipate_amit"
+                        android:textColor="@color/AMIT_THEME_BLACK"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/fcgo_btn_enter"
+                        style="@style/button_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_background"
+                        android:gravity="center|center_vertical|center_horizontal"
+                        android:text="@string/enter"
+                        android:textColor="@color/AMIT_THEME_BLACK"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fcgo_tv_or"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/gap"
+                android:text="@string/formOr"
+                android:textColor="@color/AMIT_THEME_DARK_ORANGE"
+                android:textSize="28dip"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dip"
+                android:layout_gravity="center"
+                android:background="@drawable/small_wood_amit"
+                android:orientation="vertical"
+                android:padding="@dimen/gap" >
+
+                <TextView
+                    android:id="@+id/fcgo_tv_playGameHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/iJustWantToPlayTheGame"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/THEME_BROWN" />
+
+                <Button
+                    android:id="@+id/fcgo_btn_play"
+                    style="@style/button_style"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:layout_gravity="center|center_vertical|center_horizontal"
+                    android:gravity="center|center_vertical|center_horizontal"
+                    android:text="@string/play"
+                    android:textColor="@color/AMIT_THEME_BLACK" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>

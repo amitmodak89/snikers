@@ -1,0 +1,188 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/THEME_BROWN"
+    tools:context="com.mars.snickers.Fragment_RevealHungryDetail">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/frhd_bottomBar">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/gap">
+
+
+            <TextView
+                android:id="@+id/frhd_tv_whoAreYou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:paddingLeft="@dimen/gapx0.75" 
+                android:paddingRight="@dimen/gapx0.75"
+                android:lineSpacingExtra="@dimen/gapx0.5"
+                
+                android:text="@string/hungryHeader"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/AMIT_THEME_DARK_ORANGE"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/frhd_tv_useTheApp"
+                android:layout_width="280dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/gapx2"
+                android:gravity="center"
+                android:paddingLeft="@dimen/gapx0.75"
+                android:lineSpacingExtra="@dimen/gapx0.5"
+                android:text="@string/hungryText"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gapx2"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/diva" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/frhd_tv_divaName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/avatarname1"
+                        android:lineSpacingExtra="@dimen/gapx0.5"
+                        android:paddingLeft="@dimen/gapx0.75"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/THEME_YELLOW"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/frhd_tv_divaDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gap"
+                        android:lineSpacingExtra="@dimen/gapx0.5"
+                        android:paddingLeft="@dimen/gapx0.75"
+                        android:text="@string/avatardesc1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/THEME_YELLOW" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap">
+
+
+                <ImageView
+                    android:id="@+id/frhd_iv_grandma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/grandma" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/frhd_iv_grandma"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/frhd_tv_grandmaName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/avatarname2"
+                        android:lineSpacingExtra="@dimen/gapx0.5"
+                        android:paddingLeft="@dimen/gapx0.75"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/THEME_YELLOW"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/frhd_tv_grandmaDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gap"
+                        android:paddingLeft="@dimen/gapx0.75"
+                        android:text="@string/avatardesc2"
+                        android:lineSpacingExtra="@dimen/gapx0.5"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/THEME_YELLOW" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/caveman" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/frhd_tv_cavemanName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/gapx0.75"
+                        android:text="@string/avatarname3"
+                        android:lineSpacingExtra="@dimen/gapx0.5"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/THEME_YELLOW"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/frhd_tv_cavemanDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gap"
+                        android:lineSpacingExtra="@dimen/gapx0.5"
+                        android:paddingLeft="@dimen/gapx0.75"
+                        android:text="@string/avatardesc3"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/THEME_YELLOW" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/proceed_bottombar"
+        android:id="@+id/frhd_bottomBar"/>
+</RelativeLayout>

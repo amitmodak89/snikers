@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="app_name">انت مين وانت جوعان؟ </string>
+    <string name="enterDetailsHeader">أدخل البيانات</string>
+    <string name="formNameHint">  الاسم*</string>
+    <string name="formSurnameHint">اسم العائلة*</string>
+    <string name="formEmailHint">البريد الإلكتروني*</string>
+    <string name="formCode">الرمز</string>
+    <string name="formMobileNo">رقم الهاتف المتحرك*</string>
+    <string name="formSubmitButton">إرسال</string>
+    <string name="formStarNotice">* *الحقول إلزامية</string>
+    <string name="formOr">موافق</string>
+    <string name="formFacebookConnect">التواصل عن طريق الفيسبوك</string>
+    <string name="getPictureTitle">"انطلاقة قوية هذا متعة ركوب مليئة صورة ل نفسك"</string>
+    <string name="takePicture"> التقط </string>
+    <string name="uploadGallery">معرض الصور</string>
+    <string name="promiseHeader">ما نتعهّد به</string>
+    <string name="promiseText">"في مارس نحن نتحمّل مسؤولية تسويق جميع منتجاتنا التجارية بالشكل المناسب وبجديّة تامة. فقد وضعنا قوانين تسويقية تتحكم في نشاطاتنا التسويقية وتراقبها للتأكد من أننا لن نسوّق منتجاتنا إلا للأشخاص الأكبر من عمر ال 12 سنة، ذلك لأننا نعتبر أنه بهذا العمر بإمكان الشخص البالغ اتخاذ قرارات مبنية على علم ومعرفة تامة عن الاستهلاك المعقول للشوكولاتة
+نطبّق قوانينا التسويقية على جميع حملاتنا الإعلامية والإعلانية، ونتعهّد بأن نقدّم لك ولعائلتك المعلومات المناسبة والشفافية الكاملة بخصوص المعلومات والمكونات الغذائية الخاصة بمنتجاتنا
+لمزيد من المعلومات حول كيفية قيامنا بتسويق منتجاتنا بمسؤولية تامة وحذر، الرجاء اتباع العنوان الالكتروني الخاص بقوانين مارس التسويقية
+"</string>
+    <string name="hungryHeader">انت مين وانت جوعان؟ </string>
+    <string name="hungryText">استخدم تطبيق سنيكرز لمعرفة من انت وانت جيعان. اختر من مختلف الحالات المزاجية والشخصيات للكشف عن شخصيتك الجائعة الحقيقية!</string>
+    <string name="proceed">المتابعة</string>
+    <string name="pickOptionHeaderText">اختر واحدًا من الخيارات التالية</string>
+    <string name="participateCampaignHeader">أريد المشاركة في الحملة الترويجية</string>
+    <string name="howToParticipate_amit">كيفية المشاركة</string>
+    <string name="enter">دخول</string>
+    <string name="iJustWantToPlayTheGame">أريد الاستمتاع باللعبة فقط</string>
+    <string name="play">العب</string>
+    <string name="howToParticipatedataAMIT">يرجى ملء بياناتك وتحميل صورة لك عالية الدقة. هناك 100 فائز محظوظين سيتم اختيارهم من قبل هيئة اليانصيب وستنشر أسماؤهم في صحف ........................ بتاريخ ........... ترقب الأخبار في صندوق البريد</string>
+    <string name="remember">تذكر الاحتفاظ بغلاف سنيكرز وإيصال الشراء خلال مدة الحملة كي تتمكن من المطالبة بجائزتك.</string>
+    <string name="TURKEY">تركيا</string>
+    <string name="QATAR">قطر</string>
+    <string name="JORDAN">الأردن</string>
+    <string name="UAE">الإمارات العربية المتحدة</string>
+    <string name="KUWAIT">الكويت</string>
+    <string name="BAHRAIN">البحرين</string>
+    <string name="OMAN">سلطنة عمان</string>
+    <string name="form_header">الرجاء ادخال معلوماتك الشخصية للمتابعة</string>
+    <string name="dob">تاريخ الميلاد</string>
+    <string name="dd">اليوم</string>
+    <string name="mm">الشهر</string>
+    <string name="yyyy">العام</string>
+    <string name="formAddress">العنوان</string>
+    <string name="legalAcceptance">قرأت جميع الشروط القانونية للمشاركة وشروط الدخول بالسحب وأوافق عليها.</string>
+    <string name="formMandatory">الحقول الالزامية</string>
+    <string name="selectAvatarHeader">اختر شخصيتك المفضلة وأرسل صورة وجهية لك</string>
+    <string name="selectAvatarWarning">يرجى العلم أنه إذا لم تكن دقة الصورة مناسبة، سنقوم بإنتاج شخصيتك الجائعة مع سنيكرز من دون وجهك.</string>
+    <string name="selectAvatar">اختر شخصية</string>
+    <string name="uploadHeader">اختر شخصية</string>
+    <string name="browse">تصفح</string>
+    <string name="thankYouHeader_amit">شكرًا لمشاركتك</string>
+    <string name="thankYouMessage_amit">لديك فرصة لربح جهاز iPad 5 مع غلاف شخصي. غذا كنت أحد الفائزين سيظهر اسمك في قائمة الفائزين بصحيفة ............. بتاريخ ................. نوفمبر. نتمنى لك الفوز وحظًا سعيدًا</string>
+    <string name="share">شارك على</string>
+    <string name="playTheGame">العب اللعبة</string>
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="cancel">الغاء</string>
+    <string name="noCamera">لم ترصد الكاميرا</string>
+    <string name="noSelectionMade">لم يتم الاختيار</string>
+    <string name="failedToLoad">يرجى المحاولة مرة اخرى</string>
+    <string name="processCancelled">الغيت العملية!</string>
+    <string name="chooseCharacter"> اختر شخصيتك المفضلة</string>
+    <string name="pickMood"> اختر الحالة المزاجية التي تناسبك</string>
+    <string name="chooseProp"> اختر نوع أداة</string>
+    <string name="apply">طبّق</string>
+    <string name="caveman">انسان حجري</string>
+    <string name="grandma">ستي الختيارة</string>
+    <string name="diva">نجمة الملايين</string>
+    <string name="clumpsy">ضعيفة</string>
+    <string name="crazy">مجنون</string>
+    <string name="irritated">وتعكر المزاج</string>
+    <string name="sad">غير مركزة</string>
+    <string name="bonechain">قلادة</string>
+    <string name="scar">ندبة جرح</string>
+    <string name="hat">قبعة</string>
+    <string name="scarf">وشاح رقبة</string>
+    <string name="glass">نظارات مكسورة</string>
+    <string name="wig">باروكة</string>
+    <string name="playTheGameAndFindOut">العب اللعبة واكتشف</string>
+    <string name="cancelled">الغاء</string>
+    <string name="permission_not_granted">لم تمنح الرخصة للدخول</string>
+    <string name="ok">موافق</string>
+    <string name="title_activity_activity__media_player_controller">سنكرز</string>
+    <string name="hello_world">اهلاً بالعالم!</string>
+    <string name="action_settings">الاعدادات</string>
+    <string name="required">مطلوب</string>
+    <string name="inCorrectEmail">البريد الالكتروني غير صحيح</string>
+    <string name="agreeTC">الرجاء الموافقة على الاحكام والشروط</string>
+    <string name="inCorrectMobileNo">رقم الهاتف غير صحيح</string>
+    <string name="noInternetFound">الرجاء التأكد من توصيل الانترنت</string>
+    <string name="progressMessage">الرجاء الانتظار</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save">احفظ الصورة</string>
+    <string name="invitefriends">دعوة الأصدقاء</string>
+    <string name="playagain">العب مرة ثانية</string>
+    <string name="youare">أنت</string>
+    <string name="whenyouarehungry">عندما تكون</string>
+    <string name="reset">إعادة</string>
+    <string name="done">تم</string>
+    <string name="sucessfulShare">تم مشاركة الصورة بنجاح</string>
+    <string name="formTermsAndCondition"><![CDATA[الاحكام والشروط]]></string>
+
+    <string name="selectProp">الرجاء اختيار الاكسسوار للعب</string>
+    <string name="userAvatarFileName">Snicker_Avatar</string>
+    <string name="fileMissingError">حدث خطأ</string>
+    <string name="pleaseUpload">الرجاء تحميل صورة للمتابعة</string>
+    <string name="requestCancelled">الغي الطلب</string>
+    <string name="requestSent">ارسل الطلب</string>
+    <string name="error">خطأ</string>
+
+
+    <string name="fb_share_title_t">من أنت عندما كنت جائعا</string>
+    <string name="fb_share_desc_t">أنا فقط شاركت في من أنت عندما كنت الجياع حملة للفوز باد مع غطاء مخصصة! الحصول على يدكم جدا</string>
+
+    <string name="fb_share_title">من أنت عندما كنت جائعا</string>
+    <string name="fb_share_desc">كل شيء مختلف عندما كنت جائعا. لأنك لست أنت عندما كنت جائعا. اللعب ومعرفة.</string>
+
+    
+    <!--twitter-->
+    <string name="tweet_t">لقد اشتركت للتو بمسابقة مين انت وانت جوعان للفوز ب iPad وغلاف شخصي! احصل عليه ايضاً</string>
+    <string name="tweet">انت مين وانت جوعان؟ كل شيء مختلف عندما تكون جوعان لانك انت لست انت وانت جوعان. العب الان</string>
+
+    <string name="termsAndCondition_registerData">
+        <li>يسري هذا العرض ابتداءً من 4 أكتوبر وحتى 3 نوفمبر 2014</li>
+        <li>سيتم إجراء السحب بتاريخ 13 نوفمبر في مكاتب توتال للدعاية والإعلان ذ.م.م. في دبي</li>
+        <li>لايمكن استبدال الجوائز بقيمتها النقدية</li>
+        <li>الجوائز هي فقط أجهزة آي باد 16 جيغابايت واي فاي</li>
+        <li>سيتم الاتصال بالفائزين بأرقام الهواتف المأخوذة من بيانات الرسائل النصية القصيرة</li>
+        <li>يجب المطالبة بالجائزة قبل تاريخ 7 يناير 2015 واستلامها في مكاتب توتال للدعاية والإعلان ذ.م.م. جهة الاتصال: سيسيليا كاردونا على الرقم 0559546009</li>
+        <li>يجب على الفائزين تقديم إثبات الشراء (إيصال) مع التعريف الشخصي (بطاقة الهوية أو جواز السفر) عند المطالبة بجوائزهم.</li>
+        <li>يجب على المشاركين بالمسابقة الاحتفاظ بغلاف سنيكرز للمطالبة بجائزتهم</li>
+        <li>لايحق لموظفي شركة مارس الخليج، وموزعيها ووكالاتها الإعلانية المشاركة بالمسابقة</li>
+        <li>يسري هذا العرض الترويجي من خلال الرسائل النصية القصيرة للعملاء في الإمارات العربية المتحدة، والكويت، وسلطنة عمان، والبحرين فقط (قطر غير مشمولة بهذا العرض)</li>
+    </string>
+
+    <string name="avatarname1">نجمة الملايين</string>
+    <string name="avatarname2">ستي الختيارة</string>
+    <string name="avatarname3">انسان حجري</string>
+    <string name="avatardesc1">هل تستشيط غضبًا حتى من همسات نسائم الهواء عندما تكن جائعًا؟ هل من الممكن أن تشعر بالبرودة والحرارة في نفس الغرفة؟ نعم، عندما لا تكون الأشياء كما تريدها على مزاجك فأنت حتمًا نجمة الملايين الأنانية المشاكسة المتنمرة، ولا تخشى أن تتذمر على كل شيء حولها أبدًا. كلبك الشيواوا طلب مياهًا معدنية قبل بضعة دقائق.</string>
+    <string name="avatardesc2">هل يشعرك المشي لبضعة أمتار وكأنك تجري في سباق ماراثون؟ يا إلهي، شخصيتك وأنت جائع تشبه ستي الختيارة. العالم يجري من حولك بسرعة لاتستطيع أن تجاريها، وعندما يطلب منك الناس الإسراع في إيقاعاتك تستشيط غضبًا ولا ينجو أحد من تذمرك وهجومك.</string>
+    <string name="avatardesc3">هل تعاني من نوبات هيجان لايمكن التحكم بها عندما تكون جائعًا؟ وهل يتوافق غضبك وانفعالك مع تصرفات وصراخ الانسان الحجري المتوحش في عصور ما قبل التاريخ؟ احذر، أنت انسان حجري. أتفه الأمور تثير غضبك وتطلق فيك هذه القوة المتوحشة التي تخيف أصدقاءك كثيرًا.</string>
+
+    <string name="tnc_jordan">-مدة الحملة الترويجية من تاريخ 15 سبتمبر وحتى 15 نوفمبر 2014/n
+-يجب على الرابحين الاحتفاظ بالأغلفة كإثبات شراء من أجل المطالبة بجوائزهم/n
+-الجوائز عبارة عن 50 جهاز آي باد Air 16 جيغابايت/n
+
+المملكة الأردنية الهاشمية: 90665/n
+جمهورية مصر العربية: 6063/n
+الإمارات العربية المتحدة: 5079/n
+البحرين: 99457 382 00973/n
+الكويت: 84573 663 00965/n
+سلطنة عمان: 25454 998 00968/n</string>
+
+
+    <string name="revealhungryme">حقيقتي وانا جوعان</string>
+    <string name="selectLocation">اختر البلد</string>
+    <string name="rotate">تدوير</string>
+ 
+</resources>

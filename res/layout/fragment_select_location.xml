@@ -1,0 +1,58 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/THEME_BROWN"
+    tools:context="com.mars.snickers.Fragment_SelectLocation">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/wood"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/gap"
+        android:paddingLeft="@dimen/gapx2.5"
+        android:paddingRight="@dimen/gapx2.5"
+        android:paddingTop="@dimen/gapx2.5">
+
+        <TextView
+            android:id="@+id/fsl_tv_selectLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/selectLocation"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/THEME_BROWN"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/fsl_iv_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/gapx2"
+             />
+
+        <Spinner
+            android:id="@+id/fsl_spnr_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dropdownfield"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/fsl_btn_enter"
+            style="@style/button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical|center"
+            android:gravity="center|center_vertical|center_horizontal"
+            android:layout_marginTop="@dimen/gap"
+            android:layout_marginBottom="@dimen/gapx0.5"
+            
+            android:text="@string/enter"
+            />
+    </LinearLayout>
+</ScrollView>

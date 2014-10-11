@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="THEME_BROWN">#371309</color>
+    
+    <color name="THEME_DARK_BROWN">#2A0D06</color>
+    <color name="THEME_MED_BROWN">#6D4D32</color>
+    <color name="THEME_LIGHT_BROWN">#3E190C</color>
+    <color name="THEME_LIGHT_YELLOW">#E4CF97</color>
+    
+    <color name="THEME_YELLOW">#F7AC31</color>
+    <color name="THEME_TRANSPARENT">#80000000</color>
+    <color name="THEME_RED">#ffcc0000</color>
+    <color name="FACEBOOK_BLUE">#3b5998</color>
+    <color name="TWITTER_BLUE">#4099FF</color>
+    <color name="COPYRIGHT_BROWN">#372e29</color>
+    <color name="MUSIC_BROWN">#574e47</color>
+
+    <color name="BUTTON_BROWN">#3f190a</color>
+
+    <color name="AMIT_THEME_BROWN_BG">#2b0c06</color>
+    <color name="AMIT_THEME_BLACK">#000000</color>
+    <color name="AMIT_THEME_DARK_ORANGE">#ff822e</color>
+    <color name="AMIT_THEME_LIGHT_BROWN">#dfb893</color>
+    <color name="AMIT_THEME_LIGHT_PINK">#e6b48d</color>
+</resources>

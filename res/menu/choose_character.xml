@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/choose_char_diva"
+        android:icon="@drawable/prop_diva"
+        android:orderInCategory="1"
+        android:title="@string/diva"
+        app:showAsAction="always|withText"/>
+    <item
+        android:id="@+id/choose_char_grandma"
+        android:icon="@drawable/prop_grandma"
+        android:orderInCategory="2"
+        android:title="@string/grandma"
+        app:showAsAction="always|withText"/>
+    <item
+        android:id="@+id/choose_char_caveman"
+        android:icon="@drawable/prop_cavemen"
+        android:orderInCategory="3"
+        android:title="@string/caveman"
+        app:showAsAction="always|withText"/>
+
+</menu>

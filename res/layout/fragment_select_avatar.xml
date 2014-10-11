@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/THEME_BROWN"
+    tools:context="com.mars.snickers.Fragment_SelectAvatar">
+
+    <ScrollView
+        android:layout_above="@+id/fsa_layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/gap">
+
+            <TextView
+                android:id="@+id/fsa_tv_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/selectAvatarHeader"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/THEME_LIGHT_YELLOW"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/fsa_tv_subHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap"
+                android:gravity="center"
+                android:text="@string/selectAvatarWarning"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/THEME_MED_BROWN" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap"
+                android:background="@drawable/small_wood"
+                android:orientation="vertical"
+                android:padding="@dimen/gap">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/fsa_tv_selectChar"
+                    android:text="@string/selectAvatar"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/THEME_BROWN"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/fsa_rg_avatars"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/gap"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/fsa_rb_diva"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/gapx0.5"
+                        android:button="@drawable/selector_radio_diva" />
+
+                    <RadioButton
+                        android:id="@+id/fsa_rb_grandma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/selector_radio_grandma" />
+
+                    <RadioButton
+                        android:id="@+id/fsa_rb_caveman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/gapx0.5"
+                        android:button="@drawable/selector_radio_caveman" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap"
+                android:background="@drawable/small_wood"
+                android:orientation="vertical"
+                android:padding="@dimen/gap">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/fsa_tv_upload"
+                    android:text="@string/uploadHeader"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/THEME_BROWN"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/fsa_btn_upload"
+                    style="@style/button_browse_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="@dimen/gapx1.5"
+                    android:paddingRight="@dimen/gapx1.5"
+                    android:paddingTop="@dimen/gapx0.5"
+                    android:paddingBottom="@dimen/gapx0.5"
+                    android:layout_marginTop="@dimen/gap"
+                    android:text="@string/browse" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/THEME_LIGHT_BROWN" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+<!--     <include layout="@layout/proceed_bottombar" android:id="@+id/fsa_layout_bottom" /> -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/THEME_LIGHT_BROWN"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/THEME_DARK_BROWN" />
+
+    <ImageView
+        android:id="@+id/btn_proceed_to_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/usephoto"
+        android:drawablePadding="@dimen/gapx0.25"
+        android:drawableRight="@drawable/usephoto"
+        android:padding="@dimen/gapx0.5"
+        android:text=""
+        android:textColor="@color/THEME_LIGHT_YELLOW" />
+
+</LinearLayout>
+
+</RelativeLayout>

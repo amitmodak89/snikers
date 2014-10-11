@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="app_name">AÇKEN SEN KİMSİN? </string>
+    <string name="enterDetailsHeader">BİLGİLERİNİ GİR.</string>
+    <string name="formNameHint">  AD*</string>
+    <string name="formSurnameHint">SOYAD*</string>
+    <string name="formEmailHint">E-POSTA ADRESİ*</string>
+    <string name="formCode">YÖNETMELİĞİMİZE</string>
+    <string name="formMobileNo">CEP TELEFONU*</string>
+    <string name="formSubmitButton">ONAYLA</string>
+    <string name="formStarNotice">*DOLDURULMASI ZORUNLU ALANLAR.</string>
+    <string name="formOr">TAMAM</string>
+    <string name="formFacebookConnect">FACEBOOK İLE BAĞLAN</string>
+    <string name="getPictureTitle">"KICK START THIS FUN FILLED ESCAPADE WITH AN IMAGE OF YOURSELF"</string>
+    <string name="takePicture"> FOTOĞRAFINI ÇEK </string>
+    <string name="uploadGallery">GALERİDEN YÜKLE</string>
+    <string name="promiseHeader">VAADİMIZ</string>
+    <string name="promiseText">BİZ, MARS GIDA’DA MARKALARIMIZI DOĞRU BİR ŞEKİLDE PAZARLAMANIN SORUMLULUĞUNU OLDUKÇA CİDDİYE ALMAKTAYIZ. BU BAĞLAMDA HER TÜRLÜ PROMOSYON AKTİVEMİZ,  OLUŞTURDUĞUMUZ PAZARLAMA YÖNETMELİĞİMİZE GÖRE ŞEKİLLENMEKTEDİR. BU YÖNETMELİĞE GÖRE DE ÜRÜNLERİMİZİ SADECE 12 YAŞ VE ÜSTÜ İÇİN PAZARLAMAKTAYIZ. ÇÜNKÜ, ANCAK SÖZ KONUSU YAŞ GRUPLARININ ATIŞTIRMALIK ÜRÜN TÜKETİMİNDE BİLİNÇLİ SEÇİMLER YAPABİLDİĞİNE İNANMAKTAYIZ. TEMEL AMACIMIZ, BU YÖNETMELİĞİ BÜTÜN REKLAM VE İLETİŞİM AKTİVİTELERİMİZDE UYGULAMAK, ÜRÜNLERİMİZ HAKKINDAKİ BİLGİYİ SİZE VE AİLENİZE EN ANLAŞILIR VE UYGUN BİR ŞEKİLDE AKTARMAKTIR.  ÜRÜNLERİMİZİN TANITIMINI NE ŞEKİLDE YAPTIĞIMIZLA İLGİLİ DAHA FAZLA BİLGİ İÇİN LÜTFEN MARS PAZARLAMA YÖNETMELİĞİ LİNKİNE TIKLAYIN.</string>
+    <string name="hungryHeader">AÇKEN SEN KİMSİN? </string>
+    <string name="hungryText">SNICKERS UYGULAMASINI BAŞLAT VE AÇKEN KİM OLDUĞUNU ÖĞREN.</string>
+    <string name="proceed">DEVAM ET</string>
+    <string name="pickOptionHeaderText">AŞAĞIDAKİ SEÇENEKLERDEN BİRİNİ İŞARETLE.</string>
+    <string name="participateCampaignHeader">KAMPANYAYA KATILMAK İSTİYORUM.</string>
+    <string name="howToParticipate_amit">KAMPANYAYA NASIL \n KATILABİLİRİM?</string>
+    <string name="enter">BİLGİLERİNİ GİR.</string>
+    <string name="iJustWantToPlayTheGame">SADECE OYUNU OYNAMAK İSTİYORUM.</string>
+    <string name="play">OYNA</string>
+    <string name="howToParticipatedataAMIT">BİLGİLERİNİ GİR VE YÜKSEK ÇÖZÜNÜRLÜKLÜ PROFİL FOTOĞRAFINI YÜKLE. YAPILACAK ÇEKİLİŞLE BELİRLENECEK 100 ŞANSLI KİŞİDEN BİRİ OL. KAMPANYA KOŞULLARINI OKUMAYI UNUTMA!</string>
+    <string name="remember">ÖDÜLÜNÜ ALMAK İÇİN KAMPANYA TARİHLERİ İÇERİSİNDE SATIN ALDIĞIN SNICKERS PAKETİNİ VE FATURASINI SAKLAMAYI UNUTMA.</string>
+    <string name="TURKEY">TÜRKİYE</string>
+    <string name="QATAR">KATAR</string>
+    <string name="JORDAN">ÜRDÜN</string>
+    <string name="UAE">BAE</string>
+    <string name="KUWAIT">KUVEYT</string>
+    <string name="BAHRAIN">BAHREYN</string>
+    <string name="OMAN">UMMAN</string>
+    <string name="form_header">DEVAM ETMEK İÇİN KİŞİSEL BİLGİLERİNİ GİR.</string>
+    <string name="dob">DOĞUM TARİHİ</string>
+    <string name="dd">GG</string>
+    <string name="mm">AA</string>
+    <string name="yyyy">YYYY</string>
+    <string name="formAddress">ADRES*</string>
+    <string name="legalAcceptance">KATILIM KOŞULLARINI OKUDUM VE KABUL EDİYORUM.</string>
+    <string name="formMandatory">*DOLDURULMASI ZORUNLU ALANLAR.</string>
+    <string name="selectAvatarHeader">FAVORİ KARAKTERİNİ SEÇ VE FOTOĞRAFINI PAYLAŞ.</string>
+    <string name="selectAvatarWarning">YÜKLEDİĞİN FOTOĞRAFIN ÇÖZÜNÜRLÜĞÜ YETERLİ DEĞİLSE VEYA FOTOĞRAF UYGUN BULUNMAZSA AÇ KARAKTERİN SENİN FOTOĞRAFIN KULLANILMADAN SNICKERS TARAFINDAN OLUŞTURULACAKTIR VE iPAD KILIFININ ÜZERİNE BU FOTOĞRAF YERLEŞTİRİLECEKTİR.</string>
+    <string name="selectAvatar">KARAKTERİNİ SEÇ</string>
+    <string name="uploadHeader">YÜKSEK ÇÖZÜNÜRLÜKLÜ BİR FOTOĞRAFINI EKLE.</string>
+    <string name="browse">ARA</string>
+    <string name="thankYouHeader_amit">KATILIMIN İÇİN TEŞEKKÜR EDERİZ.</string>
+    <string name="thankYouMessage_amit">ARTIK, SEÇİMİNE GÖRE TASARLANMIŞ KILIFIYLA 100 iPAD5’TEN BİRİNİ KAZANMA ŞANSINA SAHİPSİN. BOL ŞANSLAR!</string>
+    <string name="share">PAYLAŞ</string>
+    <string name="playTheGame">OYUNU OYNA</string>
+    <string name="home">ANA SAYFA</string>
+    <string name="cancel">iptal</string>
+    <string name="noCamera">KAMERA BULUNAMADI.</string>
+    <string name="noSelectionMade">SEÇİM YAPILMADI.</string>
+    <string name="failedToLoad">YÜKLEME BAŞARISIZ, TEKRAR DENEYİN.</string>
+    <string name="processCancelled">İŞLEM İPTAL EDİLDİ!</string>
+    <string name="chooseCharacter">KARAKTERİNİ SEÇ</string>
+    <string name="pickMood">RUH HALİNİ SEÇ</string>
+    <string name="chooseProp">ÖZELLİK SEÇ</string>
+    <string name="apply">UYGULA</string>
+    <string name="caveman">MAĞARA ADAMI</string>
+    <string name="grandma">HUYSUZ İHTİYAR</string>
+    <string name="diva">ASSOLİST</string>
+    <string name="clumpsy">zayıf</string>
+    <string name="crazy">ÇILGIN</string>
+    <string name="irritated">AKSİ</string>
+    <string name="sad">UNFOCUSED</string>
+    <string name="bonechain">KEMİK KOLYE</string>
+    <string name="scar">YARA İZİ</string>
+    <string name="hat">ŞAPKA</string>
+    <string name="scarf">ŞAL</string>
+    <string name="glass">KIRIK GÖZLÜK</string>
+    <string name="wig">PERUK</string>
+    <string name="playTheGameAndFindOut">OYUNU OYNA, KİM OLDUĞUNU ÖĞREN.</string>
+    <string name="cancelled">CANCELLED</string>
+    <string name="permission_not_granted">GİRİŞ İZNİ VERİLMEDİ</string>
+    <string name="ok">TAMAM</string>
+    <string name="title_activity_activity__media_player_controller">Snickers</string>
+    <string name="hello_world">SELAM DÜNYA!</string>
+    <string name="action_settings">AYARLAR</string>
+    <string name="required">GEREKLİ ALANLAR</string>
+    <string name="inCorrectEmail">HATALI E-POSTA</string>
+    <string name="agreeTC">BELİRTİLEN ŞART VE KOŞULLARI KABUL EDİYORUM</string>
+    <string name="inCorrectMobileNo">HATALI CEP TELEFON NUMARASI</string>
+    <string name="noInternetFound">LÜTFEN INTERNET BAĞLANTINIZI KONTROL EDİN.</string>
+    <string name="progressMessage">LÜTFEN BEKLEYİN</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save">FOTOĞRAFI KAYDET</string>
+    <string name="invitefriends">ARKADAŞINI DAVET ET.</string>
+    <string name="playagain">TEKRAR OYNA</string>
+    <string name="youare">AÇKEN</string>
+    <string name="whenyouarehungry">SEN BUSUN AÇKEN</string>
+    <string name="reset">SIFIRLA</string>
+    <string name="done">BİTİR</string>
+    <string name="sucessfulShare">İŞLEM BAŞARIYLA TAMAMLANDI!</string>
+    <string name="formTermsAndCondition"><![CDATA[KULLANIM ŞARTI VE KOŞULLARI]]></string>
+
+    <string name="selectProp">UYGULAMAK İÇİN BİR ÖZELLİK SEÇİN.</string>
+    <string name="userAvatarFileName">Snicker_Avatar</string>
+    <string name="fileMissingError">BİR HATA OLUŞTU!</string>
+    <string name="pleaseUpload">DEVAM ETMEK İÇİN FOTOĞRAFINIZI YÜKLEYİN.</string>
+    <string name="requestCancelled">İSTEK İPTAL EDİLDİ</string>
+    <string name="requestSent">İSTEK GÖNDERİLDİ</string>
+    <string name="error">HATA</string>
+
+
+    <string name="fb_share_title_t">Açken Sen Kimsin?</string>
+    <string name="fb_share_desc_t">SNICKERS Açken Sen Kimsin? kampanyasına katıldım ve 100 I-Pad den birini kazanma şansı yakaladım. Şimdi sıra sende, tıkla ve katıl!</string>
+
+    <string name="fb_share_title">AÇKEN SEN KIMSIN?</string>
+    <string name="fb_share_desc">AÇKEN HER ŞEY FARKLIDIR. ÇÜNKÜ AÇKEN SEN, SEN DEĞILSIN. OYUNU OYNA VE KIM OLDUĞUNU GÖR.</string>
+
+    <!--twitter-->
+    <string name="tweet_t">SNICKERS KAMPANYASINA KATILDIM, 100 I-PAD’DEN BİRİNİ KAZANMA ŞANSI YAKALADIM. TIKLA, SEN DE KATIL!</string>
+    <string name="tweet">AÇKEN SEN SEN DEĞİLSİN. PEKİ AÇKEN SEN KİMSİN? OYUNU OYNA VE KİM OLDUĞUNU GÖR.</string>
+
+    <string name="avatarname1">ASSOLİST</string>
+    <string name="avatarname2">HUYSUZ İHTİYAR</string>
+    <string name="avatarname3">MAĞARA ADAMI</string>
+    <string name="avatardesc1">AÇKEN RÜZGÂRIN FISILTISI BİLE SENİ RAHATSIZ MI EDİYOR? AYNI ANDA BİR ODANIN İÇİ HEM SICAK HEM SOĞUK MU OLUYOR? EVET, EĞER HİÇBİR ŞEY SENİN İÇİN YETERİNCE İYİ DEĞİLSE SEN KESİNLİKLE BİR ASSOLİSTSİN. BU KONUDA ŞİKÂYET ETMEKTEN DE ÇEKİNMİYORSUN.</string>
+    <string name="avatardesc2">BİRKAÇ METRE YOL YÜRÜMEK BİLE SENDE MARATON KOŞMUŞ HİSSİYATI MI YARATIYOR? AMAN TANRIM, AÇKEN SEN TAM BİR HUYSUZ İHTİYARA DÖNÜŞÜYORSUN. DÜNYA ÇOK HIZLI DÖNÜYOR VE SEN HIZINA YETİŞEMİYORSUN. İNSANLAR SANA ‘’DAHA İYİSİNİ YAPABİLİRDİN’’ DEDİKLERİNDE, DIRDIRA HAZIR OLSUNLAR.</string>
+    <string name="avatardesc3">AÇKEN KONTROL EDEMEDİĞİN ÖFKE PATLAMALARI MI YAŞIYORSUN? BU ASABİYETİNİ İLK ÇAĞLARA ÖZGÜ HAYKIRIŞLAR MI TAKİP EDİYOR? DOĞRUDUR, SEN BİR MAĞARA ADAMISIN. EN UFAK ŞEYLER BİLE TEPENİN TASINI ATTIRIYOR VE BU DURUM ARKADAŞLARINI BİLE ÇOK KORKUTUYOR.</string>
+
+
+    <string name="revealhungryme">AÇKEN KİM OLDUĞUNU ORTAYA ÇIKAR.</string>
+    <string name="selectLocation">ÜLKE SEÇİN</string>
+    
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/THEME_LIGHT_BROWN"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/THEME_DARK_BROWN" />
+
+    <ImageView
+        android:id="@+id/btn_proceed_amit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/gapx0.5"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_close"
+        android:drawablePadding="@dimen/gapx0.25"
+        android:drawableRight="@drawable/usephoto"
+        android:text=""
+        android:textColor="@color/THEME_LIGHT_YELLOW" />
+
+
+</LinearLayout>

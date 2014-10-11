@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="avatarNames">
+        <item>@string/avatarname1</item>
+        <item>@string/avatarname2</item>
+        <item>@string/avatarname3</item>
+    </string-array>
+
+    <string-array name="avatarDesc">
+        <item>@string/avatardesc1</item>
+        <item>@string/avatardesc2</item>
+        <item>@string/avatardesc3</item>
+    </string-array>
+
+    <string-array name="avatarImages">
+        <item>@drawable/diva</item>
+        <item>@drawable/grandma</item>
+        <item>@drawable/caveman</item>
+    </string-array>
+
+
+    <string-array name="grandma_clumpsy">
+        <item>@drawable/grandma_clumpsy_glass</item>
+        <item>@drawable/grandma_clumpsy_wig</item>
+    </string-array>
+
+    <string-array name="grandma_crazy">
+        <item>@drawable/grandma_crazy_glass</item>
+        <item>@drawable/grandma_crazy_wig</item>
+    </string-array>
+
+    <string-array name="grandma_irritated">
+        <item>@drawable/grandma_irritated_glass</item>
+        <item>@drawable/grandma_irritated_wig</item>
+    </string-array>
+
+    <string-array name="grandma_sad">
+        <item>@drawable/grandma_sad_glass</item>
+        <item>@drawable/grandma_sad_wig</item>
+    </string-array>
+
+
+    <string-array name="diva_clumpsy">
+        <item>@drawable/diva_clumpsy_hat</item>
+        <item>@drawable/diva_clumpsy_scarf</item>
+    </string-array>
+
+    <string-array name="diva_crazy">
+        <item>@drawable/diva_crazy_hat</item>
+        <item>@drawable/diva_crazy_scarf</item>
+    </string-array>
+
+    <string-array name="diva_irritated">
+        <item>@drawable/diva_irritated_hat</item>
+        <item>@drawable/diva_irritated_scarf</item>
+    </string-array>
+
+    <string-array name="diva_sad">
+        <item>@drawable/diva_sad_hat</item>
+        <item>@drawable/diva_sad_scarf</item>
+    </string-array>
+
+
+    <string-array name="caveman_clumpsy">
+        <item>@drawable/caveman_clumpsy_bonechain</item>
+        <item>@drawable/caveman_clumpsy_scar</item>
+    </string-array>
+
+    <string-array name="caveman_crazy">
+        <item>@drawable/caveman_crazy_bonechain</item>
+        <item>@drawable/caveman_crazy_scar</item>
+    </string-array>
+
+    <string-array name="caveman_irritated">
+        <item>@drawable/caveman_irritated_bonechain</item>
+        <item>@drawable/caveman_irritated_scar</item>
+    </string-array>
+
+    <string-array name="caveman_sad">
+        <item>@drawable/caveman_sad_bonechain</item>
+        <item>@drawable/caveman_sad_scar</item>
+    </string-array>
+</resources>

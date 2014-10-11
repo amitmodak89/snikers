@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/THEME_BROWN"
+    tools:context="com.mars.snickers.Fragment_GetPicture" >
+
+    <TextView
+        android:id="@+id/fgp_tv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginBottom="@dimen/gapx2"
+        android:layout_marginTop="@dimen/gapx2"
+        android:gravity="center"
+        android:text="@string/getPictureTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/THEME_LIGHT_YELLOW"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    
+      <Button
+        android:id="@+id/fgp_btn_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+                android:padding="20dip"
+        android:background="@color/THEME_LIGHT_BROWN"
+        android:drawableTop="@drawable/image"
+        android:text="@string/uploadGallery"
+        android:textSize="@dimen/fontSizeHeader"
+        android:textColor="@color/THEME_LIGHT_YELLOW"
+        android:textStyle="bold" />
+    
+    <Button
+        android:id="@+id/fgp_btn_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_alignLeft="@id/fgp_btn_gallery"
+        android:layout_alignRight="@id/fgp_btn_gallery"
+        android:layout_above="@id/fgp_btn_gallery"
+        android:background="@color/THEME_LIGHT_BROWN"
+        android:drawableTop="@drawable/camera"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="20dip"
+        android:text="@string/takePicture"
+        android:padding="20dip"
+android:textSize="@dimen/fontSizeHeader"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+  
+</RelativeLayout>

@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/THEME_BROWN"
+    tools:context="com.mars.snickers.Fragment_FinalScreen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ff_ll_bottomBar">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/ffs_tv_youare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gapx0.5"
+                android:gravity="center"
+                android:text="@string/youare"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/fontSizeHeader" />
+
+            <ImageView
+                android:id="@+id/ffs_iv_avatarcreated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/image_background_border"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/ffs_tv_whenHungry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/gapx0.5"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:text="@string/whenyouarehungry"
+                android:textSize="@dimen/fontSizeHeader" />
+
+            
+
+            
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ff_ll_bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/THEME_DARK_BROWN" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/AMIT_THEME_BROWN_BG"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/ffs_btn_save"
+                style="@style/button_state_style"
+                android:layout_width="0dp"
+                android:paddingTop="@dimen/gapx0.5"
+                
+                android:layout_height="fill_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@color/THEME_BROWN"
+                android:drawableTop="@drawable/savephoto"
+                android:text="@string/save" />
+
+            <Button
+                android:id="@+id/ffs_btn_inviteFriends"
+                style="@style/button_state_style"
+                android:layout_width="0dp"
+                
+                android:layout_height="fill_parent"
+                android:layout_gravity="bottom|end"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dip"
+                android:background="@color/THEME_BROWN"
+                android:drawableTop="@drawable/invitefriends"
+                android:text="@string/invitefriends" />
+
+            <Button
+                android:id="@+id/ffs_btn_playagain"
+                style="@style/button_state_style"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dip"
+                android:background="@color/THEME_BROWN"
+                android:drawableTop="@drawable/playagain"
+                android:text="@string/playagain" />
+        </LinearLayout>
+        
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/linearShareLayout"
+                android:layout_width="fill_parent"
+                android:weightSum="4"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gapx0.25"
+                android:layout_marginBottom="@dimen/gapx2"
+                android:layout_above="@id/ff_ll_bottomBar"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/ffs_btn_facebook"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/gapx0.25"
+                    android:layout_marginRight="@dimen/gapx0.25"
+                    android:src="@drawable/fb"
+                    android:background="@color/AMIT_THEME_BROWN_BG" />
+
+                <ImageButton
+                    android:id="@+id/ffs_btn_twitter"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:layout_marginLeft="@dimen/gapx0.25"
+                    android:layout_marginRight="@dimen/gapx0.25"
+android:src="@drawable/twitter"
+                    
+                    android:background="@color/AMIT_THEME_BROWN_BG"  />
+
+                <ImageButton
+                    android:id="@+id/ffs_btn_instagram"
+                    style="?android:attr/buttonStyleSmall"
+              android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/gapx0.25"
+                    android:layout_marginRight="@dimen/gapx0.25"
+                    
+android:src="@drawable/instagram"
+                    
+                    android:background="@color/AMIT_THEME_BROWN_BG" />
+
+                <ImageButton
+                    android:id="@+id/ffs_btn_email"
+                    style="?android:attr/buttonStyleSmall"
+               android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/gapx0.25"
+                    android:layout_marginRight="@dimen/gapx0.25"
+                    
+                    android:src="@drawable/email"
+                    
+                    android:background="@color/AMIT_THEME_BROWN_BG" 
+                     />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/ffs_tv_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/share"
+                android:layout_above="@id/linearShareLayout"
+                android:layout_marginBottom="@dimen/gapx0.75"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/AMIT_THEME_DARK_ORANGE" />
+    
+</RelativeLayout>

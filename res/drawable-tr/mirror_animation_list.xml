@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mirrorAnimation"
+    android:oneshot="false">
+    <item
+        android:drawable="@drawable/caveman_mirror"
+        android:duration="@integer/mirrorAnimationTime" />
+    <item
+        android:drawable="@drawable/blank_mirror"
+        android:duration="@integer/blankMirrorTime" />
+    <item
+        android:drawable="@drawable/diva_mirror"
+        android:duration="@integer/mirrorAnimationTime" />
+    <item
+        android:drawable="@drawable/blank_mirror"
+        android:duration="@integer/blankMirrorTime" />
+    <item
+        android:drawable="@drawable/grandma_mirror"
+        android:duration="@integer/mirrorAnimationTime" />
+    <item
+        android:drawable="@drawable/blank_mirror"
+        android:duration="@integer/blankMirrorTime" />
+</animation-list>

@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/THEME_BROWN"
+    tools:context="com.mars.snickers.Fragment_SaveAvatar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fsa_ll_bottomBar"
+        android:gravity="center"
+
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/fsa_iv_zoomout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/gapx0.75"
+            android:background="@drawable/zoomout" />
+
+        <ImageView
+            android:id="@+id/fsa_iv_completeEnlarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/move" />
+
+        <ImageView
+            android:id="@+id/fsa_iv_zoomin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/gapx0.75"
+            android:background="@drawable/zoomin" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/fsa_ll_bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/THEME_DARK_BROWN" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/THEME_BROWN"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/fsa_btn_reset"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableTop="@drawable/reset"
+                android:text="@string/reset"
+                android:textColor="@color/THEME_LIGHT_YELLOW" />
+
+            <Button
+                android:id="@+id/fsa_btn_savePhoto"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableTop="@drawable/done"
+                android:text="@string/done"
+                android:textColor="@color/THEME_LIGHT_YELLOW" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

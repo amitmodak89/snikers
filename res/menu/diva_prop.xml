@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/hat"
+        android:icon="@drawable/prop_hat"
+        android:orderInCategory="1"
+        android:title="@string/hat"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/scarf"
+        android:icon="@drawable/prop_scarf"
+        android:orderInCategory="2"
+        android:title="@string/scarf"
+        app:showAsAction="always|withText" />
+
+</menu>

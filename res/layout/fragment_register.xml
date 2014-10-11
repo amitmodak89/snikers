@@ -1,0 +1,203 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/THEME_BROWN">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        android:padding="@dimen/gap"
+        tools:context="com.mars.snickers.Fragment_Register">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+android:id="@+id/LinearLayout"
+            android:background="@drawable/wood"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="@dimen/gap">
+
+            <TextView
+                android:id="@+id/fr_tv_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/enterDetailsHeader"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/THEME_BROWN"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/fr_et_name"
+                    style="@style/edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/gapx0.25"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/formNameHint"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/fr_et_surname"
+                    style="@style/edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/gapx0.25"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/formSurnameHint"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/fr_et_email"
+                style="@style/edittext_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gapx0.5"
+                android:ems="10"
+                android:hint="@string/formEmailHint"
+                android:inputType="textEmailAddress" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <EditText
+                    android:id="@+id/fr_et_code"
+                    style="@style/edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/gapx0.25"
+                    android:layout_marginTop="@dimen/gapx0.5"
+                    android:layout_weight="7"
+                    android:ems="10"
+                    android:maxLength="2"
+                    android:hint="@string/formCode"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/fr_et_mobileNo"
+                    style="@style/edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gapx0.25"
+                    android:layout_marginTop="@dimen/gapx0.5"
+                    android:layout_weight="3"
+                    android:ems="10"
+                    android:maxLength="10"
+                    android:hint="@string/formMobileNo"
+                    android:inputType="phone" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fr_btn_submit"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/gap"
+                android:background="@drawable/button_background"
+                android:paddingLeft="@dimen/gapx2"
+                android:paddingRight="@dimen/gapx2"
+                android:text="@string/formSubmitButton" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gapx0.75"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <TextView
+                android:id="@+id/fr_tv_tnc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:clickable="true"
+                android:text="@string/formTermsAndCondition"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/THEME_YELLOW"
+                android:layout_weight="2" />
+
+            <TextView
+                android:id="@+id/fr_tv_note"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:text="@string/formStarNotice"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/THEME_YELLOW"
+                android:layout_weight="3" />
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/fr_tv_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/gapx1.5"
+            android:text="@string/formOr"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/THEME_YELLOW" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/small_wood"
+            android:orientation="vertical"
+            android:padding="@dimen/gapx1.5">
+
+            <TextView
+                android:id="@+id/fr_tv_fbConnect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:paddingBottom="@dimen/gapx1.5"
+                android:text="@string/formFacebookConnect"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/THEME_BROWN"
+                android:textStyle="bold" />
+
+            <com.facebook.widget.LoginButton
+                android:id="@+id/fr_btn_facebookConnect"
+android:textSize="0dip"                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/fb_btn"
+                android:text="@null"
+                facebook:confirm_logout="false"
+                facebook:fetch_user_info="true" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

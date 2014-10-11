@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/THEME_BROWN"
+    tools:context="com.mars.snickers.Activity_DisplayPicture">
+
+
+    <ImageView
+        android:id="@+id/adp_iv_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:rotation="270"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/THEME_BROWN"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/adp_btn_cancel"
+            style="@style/button_state_style"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/reset"
+            android:onClick="onCancelClick"
+            android:paddingTop="@dimen/gapx0.5"
+            android:text="@string/reset" />
+
+        <Button
+            android:id="@+id/adp_btn_rotate"
+            style="@style/button_state_style"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:drawableTop="@android:drawable/ic_menu_rotate"
+            android:onClick="onRotateClick"
+            android:visibility="gone"
+            android:paddingTop="@dimen/gapx0.5"
+            android:text="@string/rotate" />
+
+        <Button
+            android:id="@+id/adp_btn_done"
+            style="@style/button_state_style"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/done"
+            android:onClick="onDoneClick"
+            android:paddingTop="@dimen/gapx0.25"
+            android:text="@string/done"
+            android:textColor="@color/THEME_YELLOW" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,4 @@
+<layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:animation="@anim/list_view_anim"
+                 android:delay="40%"
+    />

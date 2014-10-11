@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bonechain"
+        android:icon="@drawable/prop_bonechain"
+        android:orderInCategory="1"
+        android:title="@string/bonechain"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/scar"
+        android:icon="@drawable/prop_stitches"
+        android:orderInCategory="2"
+        android:title="@string/scar"
+        app:showAsAction="always|withText" />
+
+</menu>

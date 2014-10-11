@@ -1,0 +1,561 @@
+//
+//  SCParticipateViewController.m
+//  Snickers
+//
+//  Created by Amit Singh on 30/08/14.
+//  Copyright (c) 2014 Resultrix. All rights reserved.
+//
+
+#import "SCParticipateViewController.h"
+#import "SCUploadImageViewController.h"
+#define DAYMONTHYEAR @[@"day",@"month",@"year"]
+@interface SCParticipateViewController ()
+{
+    UIActivityIndicatorView *activityIndicator;
+    SCUploadImageViewController *uploadVC;
+}
+
+@property(nonatomic)NSMutableData *webResponseData;
+
+@end
+
+@implementation SCParticipateViewController
+
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)showHtpVc:(NSInteger)viewTag
+{
+    htpVC = [self.storyboard instantiateViewControllerWithIdentifier:@"htpVC"];
+    
+    [htpVC.view viewWithTag:viewTag].hidden = NO;
+    [self presentViewController:htpVC animated:NO completion:^{
+        
+    }];
+}
+- (void) urduLoad:(NSString *)language
+{
+
+}
+//dispatch_async(dispatch_get_main_queue(), ^{
+//    self.DOB.hidden = YES; //works
+//});
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self.bottomView showdowToViewWithColor:[UIColor blackColor] Offset:CGSizeMake(0, -2) opacity:.5 radius:3
+     ];
+    [self.inputViews[4] setText:AMLocalizedString(@"ADDRESS *", nil)];
+    
+    [self.scrollView setContentSize:self.scrollSubview.size];
+    [self registerForKeyboardNotifications];
+    [self createPicker];
+    [self.submitButton setBorderToViewWithWidth:2 Color:[UIColor blackColor] cornerRadius:0];
+    [self.roundViews enumerateObjectsUsingBlock:^(UIView *obj, NSUInteger idx, BOOL *stop) {
+        [obj makeInsetShadowWithRadius:8.0 Color:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1] Directions:[NSArray arrayWithObjects:@"top", nil]];
+        
+        [obj setBorderToViewWithWidth:2 Color:[UIColor colorWithRed:69/255.0 green:26/255.0 blue:23/255.0 alpha:1] cornerRadius:10];
+        obj.clipsToBounds=YES;
+        obj.userInteractionEnabled=YES;
+    }];
+    if (self.isHTP) {
+        NSInteger  viewTag= 1;
+        [self showHtpVc:viewTag];
+        
+    }
+  //  [SCGobalVariable setLanguageAlignementOnElements:self.inputViews];
+    activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    activityIndicator.alpha = 1.0;
+    activityIndicator.center = CGPointMake(160, 240);
+    activityIndicator.hidesWhenStopped = NO;
+    [self.view addSubview:activityIndicator];
+    activityIndicator.hidden=YES;
+    self.datePicker.locale= [NSLocale currentLocale];
+    
+    self.kindlyFill.text=AMLocalizedString(@"KINDLY FILL IN YOUR PERSONAL DETAILS\nTO PROCEED FURTHER", nil);
+    self.haveReadLabel.text=AMLocalizedString(@"I HAVE READ ALL THE\nLEGAL DETAILS REGARDING\nPARTICIPATION TERMS\nAND LOTTERY CONDITONS\nI ACCEPT THEM", nil);
+    self.markedLabel.text=AMLocalizedString(@"* MARKED FIELDS ARE MANDATORY", nil);
+    
+    
+    if ([UIApplication sharedApplication].userInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
+        NSLog(@"RIGHT TO LEFT");
+        //            [[(NSMutableParagraphStyle *)paraStyle setAlignment:NSLeftTextAlignment];
+//
+//        [(UITextField *)self.inputViews[0]  setTextAlignment:NSTextAlignmentRight];
+//        [(UITextField *)self.inputViews[1]  setTextAlignment:NSTextAlignmentRight];
+//        [(UITextField *)self.inputViews[2]  setTextAlignment:NSTextAlignmentRight];
+//        [(UITextField *)self.inputViews[3]  setTextAlignment:NSTextAlignmentRight];
+//        [(UITextField *)self.inputViews[5]  setTextAlignment:NSTextAlignmentRight];
+        [(UITextField *)self.inputViews[0] setPlaceholder:AMLocalizedString(@"SURNAME *", nil)];
+        [(UITextField *)self.inputViews[1] setPlaceholder:AMLocalizedString(@"NAME *", nil)];
+//        [(UITextField *)self.inputViews[2] setPlaceholder:AMLocalizedString(@"EMAIL ID*", nil)];
+//        [(UITextField *)self.inputViews[3] setPlaceholder:AMLocalizedString(@"MOBILE NUMBER *", nil)];
+//        [(UITextField *)self.inputViews[5] setPlaceholder:AMLocalizedString(@"CITY *", nil)];
+//        [self.btnDDUrdu setTitle:AMLocalizedString(@"DD", nil) forState:UIControlStateNormal];
+//        [self.btnMMUrdu setTitle:AMLocalizedString(@"MM", nil) forState:UIControlStateNormal];
+//        [self.btnYYUrdu setTitle:AMLocalizedString(@"YYYY", nil) forState:UIControlStateNormal];
+
+        self.DOB.hidden = YES;
+        self.lblmob.hidden = YES;
+        self.btnDD.hidden = YES;
+        self.btnMM.hidden = YES;
+        self.btnYY.hidden = YES;
+        self.viewDD.hidden = YES;
+        self.viewMM.hidden = YES;
+        self.viewYY.hidden = YES;
+        [self.DOBUrdu setText:AMLocalizedString(@"DATE OF BIRTH", nil)];
+        //          [self.btnDD  setCenter:CGPointMake(30, 40)];
+        
+        //        self.btnMM.transform =  CGAffineTransformMakeTranslation( 60, 80);
+        //                [self.btnYY  setFrame:CGRectMake(60, 70, 320.0, 200)];
+        //[(UITextField *)self.inputViews[0]  setEditable:NO];
+        
+    }else
+    {
+        NSLog(@"LEFT TO RIGHT");
+        
+        //        [self urduLoad:(@"AR")];
+        //       int a =  [self.urduLoad()];
+//        
+//        [(UITextField *)self.inputViews[0]  setTextAlignment:NSTextAlignmentLeft];
+//        [(UITextField *)self.inputViews[1]  setTextAlignment:NSTextAlignmentLeft];
+//        [(UITextField *)self.inputViews[2]  setTextAlignment:NSTextAlignmentLeft];
+//        [(UITextField *)self.inputViews[3]  setTextAlignment:NSTextAlignmentLeft];
+//        [(UITextField *)self.inputViews[5]  setTextAlignment:NSTextAlignmentLeft];
+        
+        
+        
+        self.DOBUrdu.hidden = YES;
+        self.lblMobUrdu.hidden = YES;
+        self.btnDDUrdu.hidden = YES;
+        self.btnMMUrdu.hidden = YES;
+        self.btnYYUrdu.hidden = YES;
+        
+        self.viewDDUrdu.hidden = YES;
+        self.viewMMUrdu.hidden = YES;
+        self.viewYYUrdu.hidden = YES;
+        
+        [(UITextField *)self.inputViews[0] setPlaceholder:AMLocalizedString(@"NAME *", nil)];
+        [(UITextField *)self.inputViews[1] setPlaceholder:AMLocalizedString(@"SURNAME *", nil)];
+        
+        [self.dateButton[0] setTitle:AMLocalizedString(@"DD", nil) forState:UIControlStateNormal];
+        [self.dateButton[1] setTitle:AMLocalizedString(@"MM", nil) forState:UIControlStateNormal];
+        [self.dateButton[2] setTitle:AMLocalizedString(@"YYYY", nil) forState:UIControlStateNormal];
+          [self.DOB setText:AMLocalizedString(@"DATE OF BIRTH", nil)];
+        
+    }
+    [(UITextField *)self.inputViews[2] setPlaceholder:AMLocalizedString(@"EMAIL ID*", nil)];
+    [(UITextField *)self.inputViews[3] setPlaceholder:AMLocalizedString(@"MOBILE NUMBER *", nil)];
+    [(UITextField *)self.inputViews[5] setPlaceholder:AMLocalizedString(@"CITY *", nil)];
+    
+    [SCGobalVariable setLanguageAlignementOnElements:self.inputViews];
+
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+}
+- (IBAction)backButtonAction:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    
+    if ([textView.text isEqualToString:AMLocalizedString(@"ADDRESS *", nil)]) {
+        textView.text = @"";
+        //        textView.textColor = [UIColor blackColor]; //optional
+    }
+    [textView becomeFirstResponder];
+    activeField=textView;
+}
+
+- (void)textViewDidChange:(UITextView *)textView;
+{
+    [self checkAllInputs];
+}
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    if (textField.tag==106) {
+        textField.inputView=pickerView;
+        textField.userInteractionEnabled = NO;
+    }
+    return YES;
+}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@""]) {
+        textView.text = AMLocalizedString(@"ADDRESS *", nil);
+        //        textView.textColor = [UIColor lightGrayColor]; //optional
+    }
+    [textView resignFirstResponder];
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    activeField = textField;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self.inputViews[5] setUserInteractionEnabled:YES];
+    activeField = nil;
+}
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+// Called when the UIKeyboardDidShowNotification is sent.
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    [UIView animateWithDuration:.31 animations:^{
+        self.datePickerView.top=self.view.bottom;
+    }];
+    
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    self.scrollView.contentInset = contentInsets;
+    self.scrollView.scrollIndicatorInsets = contentInsets;
+    
+    // If active text field is hidden by keyboard, scroll it so it's visible
+    // Your app might not need or want this behavior.
+    CGRect aRect = self.view.frame;
+    aRect.size.height -= kbSize.height;
+    CGPoint inRectPoint=CGPointMake([activeField frame].origin.x, [(UIView *)activeField bottom] );
+    if (!CGRectContainsPoint(aRect, inRectPoint) ) {
+        [self.scrollView scrollRectToVisible:[activeField frame] animated:YES];
+    }
+}
+
+// Called when the UIKeyboardWillHideNotification is sent
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    self.scrollView.contentInset = contentInsets;
+    self.scrollView.scrollIndicatorInsets = contentInsets;
+}
+- (IBAction)viewTapGestureHandle:(id)sender {
+    [self.view endEditing:YES];
+    [self.inputViews[5] setUserInteractionEnabled:YES];
+    [UIView animateWithDuration:.31 animations:^{
+        self.datePickerView.top=self.view.bottom;
+    }];
+    
+}
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    NSString *returnStr = @"";
+    
+    if (pickerView == picker)
+    {
+        if (component == 0)
+        {
+            returnStr = [testArray objectAtIndex:row];
+        }
+        else
+        {
+            returnStr = [[NSNumber numberWithInt:row] stringValue];
+        }
+    }
+    
+    return returnStr;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return [testArray count];
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    return NO;
+}
+- (void)createPicker
+{
+    testArray = [NSArray arrayWithObjects:
+                 @"Adana",@"Adıyaman",@"Afyonkarahisar",@"Ağrı",@"Amasya",@"Ankara",@"Antalya",@"Artvin",@"Aydın",@"Balıkesir",@"Bilecik",@"Bingöl",@"Bitlis",@"Bolu",@"Burdur",@"Bursa",@"Çanakkale",@"Çankırı",@"Çorum",@"Denizli",@"Diyarbakır",@"Edirne",@"Elazığ",@"Erzincan",@"Erzurum",@"Eskişehir",@"Gaziantep",@"Giresun",@"Gümüşhane",@"Hakkâri",@"Hatay",@"Isparta",@"Mersin",@"İstanbul",@"İzmir",@"Kars",@"Kastamonu",@"Kayseri",@"Kırklareli",@"Kırşehir",@"Kocaeli",@"Konya",@"Kütahya",@"Malatya",@"Manisa",@"Kahramanmaraş",@"Mardin",@"Muğla",@"Muş",@"Nevşehir",@"Niğde",@"Ordu",@"Rize",@"Sakarya",@"Samsun",@"Siirt",@"Sinop",@"Sivas",@"Tekirdağ",@"Tokat",@"Trabzon",@"Tunceli",@"Şanlıurfa",@"Uşak",@"Van",@"Yozgat",@"Zonguldak",@"Aksaray",@"Bayburt",@"Karaman",@"Kırıkkale",@"Batman",@"Şırnak",@"Bartın",@"Ardahan",@"Iğdır",@"Yalova",@"Karabük",@"Kilis",@"Osmaniye",@"Düzce",
+                 nil];
+    
+    pickerView =[[UIView alloc]initWithFrame:CGRectMake(self.view.bottom, 0, self.view.width, 192)];
+    pickerView.backgroundColor=[UIColor colorWithRed:198/255.0 green:198/255.0 blue:198/255.0 alpha:1];
+    picker = [[UIPickerView alloc] initWithFrame:CGRectZero];
+    
+    UIButton *pickerDone=[[UIButton alloc]initWithFrame:CGRectMake(pickerView.width-60, 0, 60, 30)];
+    [pickerDone setTitle:@"Done" forState:UIControlStateNormal];
+    [pickerDone setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [pickerDone addTarget:self action:@selector(pickerDoneClicked:) forControlEvents:UIControlEventTouchUpInside];
+    picker.showsSelectionIndicator = YES;   // note this is default to NO
+    picker.tag=101;
+    picker.delegate = self;
+    picker.dataSource = self;
+    picker.bottom=picker.height;
+    [pickerView addSubview:picker];
+    [pickerView addSubview:pickerDone];
+    
+}
+-(void)pickerDoneClicked:(id)sender
+{
+    UITextField *tf=self.inputViews[5];
+    
+    tf.text=testArray[[picker selectedRowInComponent:0]];
+    [self checkAllInputs];
+    [self.view endEditing:YES];
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+{
+    if (pickerView.tag==101) {
+        
+        UITextField *tf=self.inputViews[5];
+        tf.text=testArray[row];
+        [self checkAllInputs];
+    }else
+    {
+        
+    }
+}
+- (void)checkAllInputs {
+    __block BOOL isAllNonEmpty=YES;
+    [self.inputViews enumerateObjectsUsingBlock:^(SCTextField *obj, NSUInteger idx, BOOL *stop) {
+        NSString *value = [obj.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        if (obj.tag)
+        {
+            if(value.length == 0)
+            {
+                isAllNonEmpty=NO;
+                *stop=YES;
+            }
+        }
+    }];
+    if (![SCGobalVariable validateMail:[self.inputViews[2] text]]) {
+        isAllNonEmpty=NO;
+    }
+    if ([[self.inputViews[3] text]length]<10) {
+        isAllNonEmpty=NO;
+    }
+    if (isAllNonEmpty) {
+        
+        self.accecptBtn.userInteractionEnabled=YES;
+    }else
+    {
+        self.accecptBtn.selected=NO;
+        self.submitButton.alpha=.5;
+        self.submitButton.userInteractionEnabled=NO;
+        self.accecptBtn.userInteractionEnabled=NO;
+        
+    }
+}
+
+- (IBAction)textFieldChanged:(SCTextField *)sender {
+    [self checkAllInputs];
+    
+}
+
+- (IBAction)dateChange:(UIDatePicker *)sender {
+    NSDate *selectedDate=sender.date;
+    
+    
+    __block NSArray *dayMonthYear=@[@(selectedDate.day).stringValue,@(selectedDate.month).stringValue,@(selectedDate.year).stringValue];
+    [self.dateButton enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL *stop) {
+        [obj setTitle:dayMonthYear[idx] forState:UIControlStateNormal];
+    }];
+}
+- (IBAction)dateButtonClicked:(id)sender {
+    [self.view endEditing:YES];
+    [self.inputViews[5] setUserInteractionEnabled:YES];
+    self.datePicker.maximumDate=[NSDate date];
+    [UIView animateWithDuration:.31 animations:^{
+        self.datePickerView.bottom=self.view.bottom;
+    }];
+}
+- (IBAction)testbuttonActikon:(id)sender {
+}
+
+- (IBAction)accecptButton:(id)sender {
+    UIButton *btn=self.accecptBtn;
+    if (btn.userInteractionEnabled)
+    {
+        
+        btn.selected=!btn.selected;
+        [self.view endEditing:YES];
+        [self.inputViews[5] setUserInteractionEnabled:YES];
+        [UIView animateWithDuration:.31 animations:^{
+            self.datePickerView.top=self.view.bottom;
+        }];    self.submitButton.userInteractionEnabled=btn.selected;
+        self.submitButton.alpha=(btn.selected)?1:0.5;
+        if (btn.isSelected) {
+            NSInteger  viewTag= 2;
+            [self showHtpVc:viewTag];
+        }
+    }
+}
+- (IBAction)buttonSubmit:(id)sender {
+    
+    __block NSString *userName=@"";
+    __block NSString *emailID=@"";
+    __block NSString *mobileNumber=@"";
+    __block NSString *dob=@"";
+    __block NSString *city=@"";
+    __block NSString *address=@"";
+    __block NSString *language=@"";
+    __block NSString *code=@"";
+    
+    [SCGobalVariable setNameP:[self.inputViews[0] text]];
+    [SCGobalVariable setLastNameP:[self.inputViews[1] text]];
+    [SCGobalVariable setEmailP:[self.inputViews[2] text]];
+    [SCGobalVariable setMobileNumberP:[self.inputViews[3] text]];
+    [SCGobalVariable setAddressP:[self.inputViews[4] text]];
+    [SCGobalVariable setCityP:[self.inputViews[5] text]];
+    [SCGobalVariable setDateP:[NSString stringWithFormat:@"%@/%@/%@",[[self.dateButton[1] titleLabel] text], [[self.dateButton[0] titleLabel] text],[[self.dateButton[2] titleLabel] text]]];
+    
+    userName=[NSString stringWithFormat:@"%@ %@"
+              ,[SCGobalVariable getNameP],[SCGobalVariable getLastNameP] ];
+    address=[SCGobalVariable getAddressP];
+    language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    
+    emailID=[SCGobalVariable getEmailP];
+    dob=[SCGobalVariable getDateP];
+    mobileNumber=[SCGobalVariable getMobileNumberP];
+    city=[SCGobalVariable getCityP];
+    [self registerUserWithDetails:city address:address dob:dob code:code language:language mobileNumber:mobileNumber userName:userName emailID:emailID];
+    //    self.txtMob setHidden:(true);
+    
+    [Flurry logEvent:@"tr_form_submit" timed:YES];
+    
+}
+
+- (IBAction)datePickerDoneClicked:(id)sender {
+    [self dateChange:self.datePicker];
+    [UIView animateWithDuration:.31 animations:^{
+        self.datePickerView.top=self.view.bottom;
+    }];
+    
+}
+- (void)registerUserWithDetails:(NSString *)city address:(NSString *)address dob:(NSString *)dob code:(NSString *)code language:(NSString *)language mobileNumber:(NSString *)mobileNumber userName:(NSString *)userName emailID:(NSString *)emailID
+{
+    activityIndicator.hidden=NO;
+    [activityIndicator startAnimating];
+    NSString *sSOAPMessage =  [NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"utf-8\"?>"
+                               "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">"
+                               "<soap:Body>"
+                               "<RegisterNormalUser xmlns=\"http://tempuri.org/\">"
+                               "<sUserEmail>%@</sUserEmail>"
+                               "<sPassword></sPassword>"
+                               "<sUsername>%@</sUsername>"
+                               "<sMobileNumber>%@</sMobileNumber>"
+                               "<sIPAddress></sIPAddress>"
+                               "<sLocation>%@</sLocation>"
+                               "<sLanguage>%@</sLanguage>"
+                               "<sCode>%@</sCode>"
+                               "<sDateOfBirth>%@</sDateOfBirth>"
+                               "<sAddress>%@</sAddress>"
+                               "<sCity>%@</sCity>"
+                               "<isPlay>0</isPlay>"
+                               "</RegisterNormalUser>"
+                               "</soap:Body>"
+                               "</soap:Envelope>",emailID,userName,mobileNumber,[SCGobalVariable getLocationP ],language,code,dob,address,city];
+    NSLog(@"%@",sSOAPMessage);
+    NSURL *sRequestURL = [NSURL URLWithString:@"http://snickerspromo.dessertmoments.com/staging/SnickersWS/Service.asmx?op=RegisterNormalUser"];
+    NSMutableURLRequest *myRequest = [NSMutableURLRequest requestWithURL:sRequestURL];
+    NSString *sMessageLength = [NSString stringWithFormat:@"%lu", (unsigned long)[sSOAPMessage length]];
+    
+    [myRequest addValue: @"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [myRequest addValue: @"http://tempuri.org/RegisterNormalUser" forHTTPHeaderField:@"SOAPAction"];
+    [myRequest addValue: sMessageLength forHTTPHeaderField:@"Content-Length"];
+    [myRequest setHTTPMethod:@"POST"];
+    [myRequest setHTTPBody: [sSOAPMessage dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:myRequest delegate:self];
+    
+    if( theConnection ) {
+        self.webResponseData = [NSMutableData data] ;
+    }else {
+        NSLog(@"Some error occurred in Connection");
+        
+    }
+}
+
+-(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    [self.webResponseData  setLength:0];
+}
+
+-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [self.webResponseData  appendData:data];
+}
+
+-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"Some error in your Connection. Please try again. %@",error);
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:error.localizedDescription message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+    activityIndicator.hidden=YES;
+    [activityIndicator stopAnimating];
+    
+}
+
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    
+    
+    @try {
+        NSLog(@"Received Bytes from server: %ld", [self.webResponseData length]);
+        NSString *myXMLResponse = [[NSString alloc] initWithBytes: [self.webResponseData bytes] length:[self.webResponseData length] encoding:NSUTF8StringEncoding];
+        
+        NSString *userId=[myXMLResponse componentsSeparatedByString:@"<RegisterNormalUserResult>"][1];
+        userId = [userId componentsSeparatedByString:@"</RegisterNormalUserResult>"][0];
+        NSLog(@"%@",userId);
+        [SCGobalVariable setUserID:userId];
+        activityIndicator.hidden=YES;
+        [activityIndicator stopAnimating];
+        uploadVC = [self.storyboard instantiateViewControllerWithIdentifier:@"uploadVC"];
+        [self.navigationController pushViewController:uploadVC animated:YES];
+        
+    }
+    @catch (NSException *exe) {
+        activityIndicator.hidden=YES;
+        [activityIndicator stopAnimating];
+        
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:nil message:@"Please Try Again" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+    
+    
+}
+
+@end

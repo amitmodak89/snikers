@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/glass"
+        android:icon="@drawable/prop_glass"
+        android:orderInCategory="1"
+        android:title="@string/glass"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/wig"
+        android:icon="@drawable/prop_wig"
+        android:orderInCategory="2"
+        android:title="@string/wig"
+        app:showAsAction="always|withText" />
+
+</menu>

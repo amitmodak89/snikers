@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- FACEBOOK -->
+    <string name="facebookAppId">746619522048693</string>
+<!-- 721227157956921######746619522048693####### 1475518479372399-->
+    <!-- TWITTER -->
+    <string name="twitterAppKey">Nbp8EKv1BXNa6iTPqEDDGM2mB</string>
+    <string name="twitterSecretKey">msu1ScOPb4oPGxZQYMU7cV953tLgzb60D8sKrjgoLF7MbfwBd3</string>
+
+    <!-- INSTAGRAM -->
+    <!-- <string name="instagramClientId">79ca308a9df04e62a9ab1c4b4e2b51eb</string> -->
+    <!-- <string name="instagramClientSecret">f0ac6934fe43428bb0394d4e4e9b9dec</string> -->
+
+
+    <!-- FLURRY -->
+    <string name="flurryKey">H8K6PTCWCQZRBY24Y8KG</string>
+    <string name="app_name">WHO ARE YOU WHEN YOU\'RE HUNGRY</string>
+    <string name="enterDetailsHeader">ENTER DETAILS</string>
+    <string name="formNameHint">  NAME*</string>
+    <string name="formSurnameHint">SURNAME*</string>
+    <string name="formEmailHint">EMAIL ID*</string>
+    <string name="formCode">CODE</string>
+    <string name="formMobileNo">MOBILE NUMBER*</string>
+    <string name="formSubmitButton">SUBMIT</string>
+    <string name="formStarNotice">* Marked fields are mandatory</string>
+    <string name="formOr">OR</string>
+    <string name="formFacebookConnect">CONNECT VIA FACEBOOK</string>
+    <string name="getPictureTitle">"KICK START THIS FUN FILLED ESCAPADE WITH AN IMAGE OF YOURSELF"</string>
+    <string name="takePicture"> TAKE PICTURE </string>
+    <string name="uploadGallery">UPLOAD FROM GALLERY</string>
+    <string name="promiseHeader">Our Promise</string>
+    <string name="promiseText">At Mars we take our responsibility for marketing our brands appropriately very seriously. We have a Marketing Code that governs all our promotional activity and states that we only promote our products to people aged 12 and over as this is the age at which we believe that people can make informed choices about sensible snack consumption.
+\nWe apply our Marketing Code to all our advertising and communications and are committed to providing you and your family with suitable and transparent information about our products.
+\nFor more information about how we promote our products responsibly, please follow the link to the Mars Marketing Code.</string>
+    <string name="hungryHeader">WHO ARE YOU \nWHEN YOU\'RE HUNGRY? </string>
+    <string name="hungryText">USE THE SNICKERS APP AND FIND OUT WHO YOU ARE WHEN YOU ARE HUNGRY. SELECT FROM DIFFERENT MOODS AND CHARACTERS TO REVEAL THE REAL, HUNGRY YOU!</string>
+    <string name="proceed">PROCEED</string>
+    <string name="pickOptionHeaderText">PICK FROM ONE OF THE FOLLOWING OPTIONS</string>
+    <string name="participateCampaignHeader">I WANT TO PARTICIPATE IN THE CAMPAIGN</string>
+    <string name="howToParticipate_amit">HOW TO \nPARTICIPATE?</string>
+    <string name="enter">ENTER</string>
+    <string name="iJustWantToPlayTheGame">I JUST WANT TO \nPLAY THE GAME</string>
+    <string name="play">PLAY</string>
+    <string name="howToParticipatedataAMIT">KINDLY FILL IN YOUR DETAILS AND UPLOAD A HIGH RESOLUTION IMAGE OF YOURSELF. 100 LUCKY WINNERS SELECTED BY THE LOTTERY AUTHORITY.\n\n KEEP AN EYE ON THE MAILBOX!</string>
+    <string name="remember">REMEMBER TO KEEP SNICKERS WRAPPER AND RECEIPT WHICH IS COVERING CAMPAIGN DURATION TO HELP REDEEM YOUR PRIZE.</string>
+    <string name="TURKEY">TURKEY</string>
+    <string name="QATAR">QATAR</string>
+    <string name="JORDAN">JORDAN</string>
+    <string name="UAE">UAE</string>
+    <string name="KUWAIT">KUWAIT</string>
+    <string name="BAHRAIN">BAHRAIN</string>
+    <string name="OMAN">OMAN</string>
+    <string name="form_header">KINDLY FILL IN YOUR PERSONAL DETAILS TO PROCEED FURTHER</string>
+    <string name="dob">DATE OF* \nBIRTH</string>
+    <string name="dd">DD</string>
+    <string name="mm">MM</string>
+    <string name="yyyy">YYYY</string>
+    <string name="formAddress">ADDRESS*</string>
+    <string name="legalAcceptance">I HAVE READ ALL THE LEGAL DETAILS REGARDING PARTICIPATION TERMS AND LOTTERY CONDITIONS. I ACCEPT THEM.</string>
+    <string name="formMandatory">* MARKED FIELDS ARE MANDATORY</string>
+    <string name="selectAvatarHeader">PICK YOUR FAVORITE CHARACTER AND SHARE A GREAT FACIAL SHOT OF YOURSELF.</string>
+    <string name="selectAvatarWarning">KINDLY NOTE THAT IF YOUR PHOTO TYPE AND PICTURE RESOLUTION ISN\'T APPROPRIATE, WE\'LL GENERATE YOUR SNEAKERS HUNGER CHARACTER COVER WITHOUT YOUR FACE.</string>
+    <string name="selectAvatar">SELECT CHARACTER</string>
+    <string name="uploadHeader">UPLOAD A HIGH RESOLUTION IMAGE OF YOURSELF.</string>
+    <string name="browse">BROWSE</string>
+    <string name="thankYouHeader_amit">THANK YOU FOR BEING ONE OF THE PARTICIPANTS</string>
+    <string name="thankYouMessage_amit">YOU STAND A CHANCE TO WIN \nAN IPAD 5 WITH A PERSONALISED COVER. \nSO KEEP YOUR FINGERS CROSSED!</string>
+    <string name="share">SHARE</string>
+    <string name="playTheGame">PLAY THE GAME</string>
+    <string name="home">HOME</string>
+    <string name="cancel">CANCEL</string>
+    <string name="noCamera">No camera detected.</string>
+    <string name="noSelectionMade">No selection made.</string>
+    <string name="failedToLoad">Failed to load, try again.</string>
+    <string name="processCancelled">Process cancelled!</string>
+    <string name="chooseCharacter">CHOOSE \n CHARACTER</string>
+    <string name="pickMood">PICK A \n MOOD</string>
+    <string name="chooseProp">SELECT \n PROP</string>
+    <string name="apply">APPLY</string>
+    <string name="caveman">CAVEMAN</string>
+    <string name="grandma">GRANDMA</string>
+    <string name="diva">DIVA</string>
+    <string name="clumpsy">WEAK</string>
+    <string name="crazy">CRAZY</string>
+    <string name="irritated">IRRITABLE</string>
+    <string name="sad">UNFOCUSED</string>
+    <string name="bonechain">BONECHAIN</string>
+    <string name="scar">SCAR</string>
+    <string name="hat">HAT</string>
+    <string name="scarf">SCARF</string>
+    <string name="glass">GLASS</string>
+    <string name="wig">WIG</string>
+    <string name="playTheGameAndFindOut">PLAY THE GAME AND FIND OUT.</string>
+    <string name="cancelled">CANCELLED</string>
+    <string name="permission_not_granted">PERMISSION NOT GRANTED</string>
+    <string name="ok">OK</string>
+    <string name="title_activity_activity__media_player_controller">Snickers</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="required">Required</string>
+    <string name="inCorrectEmail">Incorrect email</string>
+    <string name="agreeTC">Please agree the terms and conditions</string>
+    <string name="inCorrectMobileNo">Incorrect Mobile Number</string>
+    <string name="noInternetFound">Please verify your internet connection.</string>
+    <string name="progressMessage">Please wait</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save">SAVE PHOTO</string>
+    <string name="invitefriends">INVITE FRIENDS</string>
+    <string name="playagain">PLAY AGAIN</string>
+    <string name="youare">YOU ARE</string>
+    <string name="whenyouarehungry">WHEN YOU \nARE HUNGRY</string>
+    <string name="reset">RESET</string>
+    <string name="done">DONE</string>
+    <string name="sucessfulShare">Successfully shared!</string>
+    <string name="formTermsAndCondition"><![CDATA[Terms & Condition]]></string>
+    <string name="selectProp">Please select a prop to apply.</string>
+    <string name="userAvatarFileName">Snicker_Avatar.png</string>
+    <string name="fileMissingError">Some error occured!</string>
+    <string name="pleaseUpload">Please upload an image in order to proceed.</string>
+    <string name="requestCancelled">Request cancelled</string>
+    <string name="requestSent">Request sent</string>
+    <string name="error">Error</string>
+    <string name="avatarname1">DIVA</string>
+    <string name="avatarname2">GRANDMA</string>
+    <string name="avatarname3">CAVEMAN</string>
+    <string name="avatardesc1">Do you suffer from uncontrollable outbursts when you’re hungry? And does your short temper go hand in hand with pre-historical roaring? Check, you’re a caveman. The most trivial things ignite your short fuse and this brutal force scares your friends big time.</string>
+    <string name="avatardesc2">Does walking a few meters feel like running the marathon? Oh boy, the hungry version of you turned into a granny. The world is turning too fast and you can’t really keep up. And when people tell you to step up your game, no one is safe from the nagging attacks!</string>
+    <string name="avatardesc3">Do you suffer from uncontrollable outbursts when you’re hungry? And does your short temper go hand in hand with pre-historical roaring? Check, you’re a caveman. The most trivial things ignite your short fuse and this brutal force scares your friends big time.</string>
+
+    <!-- facebook sharing -->
+    <string name="fb_share_title_t">Who you are when you are hungry</string>
+    <string name="fb_share_desc_t">I just participated in Who Are You When You are Hungry campaign to win an iPad with a customized cover! Get yours too</string>
+    <string name="fb_share_title">Who you are when you are hungry</string>
+    <string name="fb_share_desc">Everything is different when you are hungry. Because you are not you when you are hungry. Play and find out.</string>
+
+    <!-- twitter -->
+    <string name="tweet_t">I just participated in Who Are You When You\'re Hungry to win an iPad! Participate for a chance to win</string>
+    <string name="tweet">Everything is different when you are hungry because you are not you when you are hungry. Play &amp; find out.</string>
+    <string name="revealhungryme">REVEAL HUNGRY ME</string>
+    <string name="termsAndCondition_registerData">        •This promotion is valid from <b>4th October 2014 until 3rd November 2014.</b>\n\n•The Raffle draw will be held on <b>13th November 2014</b> at Total Advertising LLC\’s office in Dubai.\n\n•Prizes cannot be exchanged for their cash value.\n\n•Prizes are <b>iPads 16GB Wifi Only.</b>\n\n•Winners will be contacted by phone numbers from the SMS database.\n\n•The prize should be claimed before <b>7th January 2015</b> and collected in Total Advertising LLC’s office. Contact Ms. Cecilia Cardona on 0559546009.\n\n•Winners will be required to present a Proof of Purchase (Receipt) and a form of identification (ID or Passport) to claim their prize.\n\n•Participants must save the Snickers Wrapper to redeem their prize.\n\n•Employees of Mars GCC, their Distributors and Advertising agencies are not eligible to participate in the promotion.\n\n•This SMS promotion is only valid for UAE, Kuwait, Oman &amp; Bahrain Customers (Qatar is not included in this promotion).\n\n</string>
+    <string name="serverError">No data passed from server.</string>
+    <string name="tnc_jordan">-The duration of the promotion is from 15th of Sept till 15th of November\n-Winners must keep the wrappers as a proof of purchase to redeem the gifts\n-There are 50 iPad Air 16 GB to be won\nJordan: 90665\nEgypt: 6063\nUAE: 5079\nBAHRAIN: 00 973 382 99457\nKUWAIT: 00 965 663 84573\nOMAN: 00 968 998 25454</string>
+    <string name="termsAndCondition_form">SNICKERS KATILIM KOŞULLARI:\n\n• www.snickers.com.tr adresi üzerinden gerçekleştirilecek olan kampanya 14.09.2014(00.01)-31.10.2014(23.59) tarihleri arasında Mars Gıda Ürünleri Tic. Ltd. Şti. tarafından düzenlenmektedir.\n\n• Kampanya tarihleri arasında Snickers ürünlerinin tanıtımı amacıyla Mars Gıda Ürünleri Tic. Ltd. Şti.’ye ait www.snickers.com.tr (ücretsiz) internet sitesine girip karşılarına çıkacak olan katılım formuna ad, soyad, adres, telefon, e-posta bilgilerini eksiksiz giren kullanıcılar kendilerine ait yüz fotoğraflarını yükleyerek ekrana gelecek olan 3 karakterden 1’ini seçip 1 çekiliş hakkı kazanacaklardır. Kampanyaya katılım 3 ile sınırlıdır. Aynı kişiye ait 3 katılım kabul edilecek, diğer katılımlar elenecektir.\n\n• Bu kampanyaya katılanlar arasında yapılacak olan çekiliş sonucunda 100 kişi iPad Air Wi-Fi 16 GB MD788TU/A+iPad Cover ikramiyesi kazanacaktır. İpad Cover, katılımcının katılım yaptığı sırada yüklediği fotoğrafı ve seçtiği karaktere göre özel olarak hazırlanacaktır. Katılım sırasında fotoğraf yüklemeyen ya da yüklediği resim uygun olmayan katılımcının iPad Cover ikramiyesi Snickers’ın 3 karakterden herhangi biri seçilerek hazırlanacaktır. İkramiye görselleri ile verilecek ikramiyenin renk ve özellikleri farklılık gösterebilir. İkramiye son teslim tarihi 01.02.2015’tir.\n\n• Bir kişi birden fazla ikramiye kazanamaz.\n\n• Katılımcı uygulamayı kabul ettiğinde, Mars Gıda Ürünleri Tic. Ltd. Şti. kullanıcıların ad, soyad bilgilerinin uygulama için kullanım hakkına sahip olur.\n\n• Kampanya katılım formundaki bilgilerin eksiksiz şekilde doldurulması gereklidir. Katılımlarda ad, soyad, adres ve bilgilerinden herhangi birinin eksik olması halinde çekilişe katılım hakkı verilmeyecektir. Bilgilerin eksik veya yanlış olması nedeniyle yaşanacak olan aksaklıklardan Mars Gıda Ürünleri Tic. Ltd. Şti. sorumlu değildir.\n\n• Tam ve doğru bilginin verilmemiş olduğunun tespiti halinde, kampanya katılımı tamamlanmamış sayılır ve bu nedenle geçersiz kabul edilir. Böyle bir durumdaki katılımcılar herhangi bir hak iddia edemezler. Mars Gıda Ürünleri Tic. Ltd. Şti. katılımcıların kampanyaya katılım uygunluğunu doğrulama ve bilgilerini teyit etme hakkını saklı tutar.\n\n• Mars Gıda Ürünleri Tic. Ltd. Şti. katılımcının e-posta adresine ürün pazarlama bilgileri gönderme ve kampanya kapsamında iletilen tüm mobil telefon numaralarına Mars Gıda Ürünleri Tic. Ltd. Şti. ile ilgili bilgi vermek amacıyla iletişime geçme hakkını saklı tutar. Katılımcılar bu hususu peşinen kabul etmiş sayılırlar.\n\n• Çekiliş, 07.11.2014 tarihinde Saat 11:00’da U2 Tanıtım ve Promosyon Hizmetleri Tic.Ltd.Şti. Gülbahar Mh. Cemal Sururi Sk. Halim Meriç İş Merkezi No:25 Daire:37 Mecidiyeköy-İstanbul adresinde bulunan konferans salonunda ve noter huzurunda, isteyen herkesin katılımına açık olarak gerçekleştirilecektir. Çekiliş sonuçları 12.11.2014 tarihinde Takvim Gazetesi Türkiye Baskısı’nda duyurulacaktır. Asil ve yedek talihlilere taahhütlü posta yolu ile tebligat yapılacaktır. Postada meydana gelen gecikmelerden U2 Tanıtım ve Promosyon Hizmetleri Tic.Ltd.Şti. veya Mars Gıda Ürünleri Tic. Ltd. Şti. sorumlu tutulamaz.\n\n• Asil talihliler, ikramiye teslimi için en geç 27.11.2014 tarihine kadar, yedek talihliler ise ikramiye teslimi için en geç 12.12.2014 tarihine kadar kimlikleri, fiş/faturası ve ürün paketi ile U2 Tanıtım ve Promosyon Hizmetleri’ne başvurmaları halinde ikramiyelerini teslim almaya hak kazanacaklardır. Bu tarihlere kadar kimliği, fiş/faturası ve ürün paketi ile başvurmayan talihliler ikramiyelerini teslim alamazlar.\n\n• Kampanyaya Mars Gıda Ürünleri Tic. Ltd. Şti. ve U2 Tanıtım ve Promosyon Hizmetleri Tic.Ltd.Şti. çalışanları katılamaz, katılmış ve kazanmış olsalar bile ikramiyeleri verilmez ve Mars Gıda Ürünleri Tic. Ltd. Şti.’nin bundan dolayı herhangi bir sorumluluğu doğmaz.\n\n• Kampanyaya katılım ve sitedeki işlemler ücretsizdir, isteyen herkes katılabilir. Katılım için başka ticari bir koşul aranmamaktadır.\n\n• 18 yaşından küçükler kampanyaya katılamaz, katılmış ve kazanmış olsalar dahi ödülleri teslim edilmez.\n\n• Kampanyaya yurt dışından katılımda bulunanlar, ödül kazanamazlar.\n\n• Kazanılan ödül değiştirilemez, devredilemez, iade edilemez veya nakde dönüştürülemez.\n\n• İkramiyeye konu olan eşya ve-veya hizmetin bedeli içinde bulunan KDV+ÖTV hariç diğer yasal yükümlülükler talihliler tarafından ödenir.\n\n• Uygulamada çeşitli yöntemlerle haksız avantaj sağlamaya çalışan katılımcıların belirlenmesi durumunda bu katılımcı ödüle hak kazanamayacak olup, Mars Gıda Ürünleri Tic. Ltd. Şti.’nin yasal işlem başlatma ve varsa bundan doğan tüm zararlarının da tazminini talep etme hakkı saklıdır.\n\n• Mars Gıda Ürünleri Tic. Ltd. Şti. kampanyaya katılım esnasında, katılımcıların kişisel bilgisayarları ve internet erişimlerinden ve her türlü teknik aksaklıklardan (İnternet hızının düşük olması, bağlantının kopması, uygun programa sahip olunmaması vb...) oluşabilecek problemlerden ve söz konusu bilgisayarlara yetkisiz erişim vb. durumlardan kaynaklanabilecek problem ve zararlardan dolayı sorumluluk kabul etmez.\n\n• Çekiliş neticesinde kazananlar, isimlerinin Takvim Gazetesi Türkiye Baskısı’nda açıklanmasını kabul etmiş olurlar.\n\n• Kampanyaya katılım sırasında eksik veya yanlış verilen iletişim bilgileri veya herhangi bir sebepten dolayı ödülün ulaşmamasından Mars Gıda Ürünleri Tic. Ltd. Şti. sorumlu değildir.\n\n• Kampanya\'ya katılanlar işbu Kampanya Katılım Koşulları’nı kabul etmiş sayılırlar. Mars Gıda Ürünleri Tic. Ltd. Şti. kampanya Katılım Koşulları’na uygun davranıp davranılmadığını dilediği şekilde değerlendirme ve denetleme hakkını saklı tutmaktadır.\n\n• Kampanya kapsamında ortaya çıkan her türlü uyuşmazlıkta Mars Gıda Ürünleri Tic. Ltd. Şti.\’nin her türlü kayıtları esas alınacaktır.\n\n• Bu çekiliş Mars Gıda Ürünleri Tic. Ltd. Şti. tarafından Milli Piyango İdaresinin 22.08.2014 tarihli ve 58259698-255.01.02/2573-6763 sayılı izni düzenlenmektedir.\n\n• Kampanyaya katılan herkes, kampanya şartlarını okuyup anlayarak peşinen kabul etmiş sayılır. Katılımcıların Kampanya şartlarına uyup uymadıklarının denetim ve değerlendirilmesi, katılımcıların beyanına dayanan bilgiler çerçevesinde, münhasıran Mars Gıda Ürünleri Tic. Ltd. Şti. tarafından yapılacaktır. Mars Gıda Ürünleri Tic. Ltd. Şti. bu koşullar ve kuralları gerektiğinde katılımcılarına önceden haber vermeksizin değiştirebilir. Koşullar ve kurallardaki değişiklikler tüm katılımcılar için bağlayıcı nitelik taşımaktadır. Bu nedenle katılımcılar, güncel koşullar ve kuralları öğrenmek için bu sayfayı düzenli olarak ziyaret etmeleri gerektiğini kabul ederler.\n\n• Koşullar ve Kurallar\'ın herhangi bir maddesi hukuka aykırı, hükümsüz ya da uygulanamaz olarak addedilirse söz konusu madde ayrılabilir olarak sayılacak ve geriye kalan hükümlerin geçerliliğini ve uygulanabilirliğini etkilemeyecektir.\n\n• Kampanya ile ilgili ayrıntılı bilgiyi hafta içi mesai saatlerinde 0212 212 40 30 No’lu U2 Kampanya Danışma Hattı’ndan ya da öğrenebilirsiniz.\n\n</string>
+    <string name="selectLocation">SELECT LOCATION</string>
+    <string name="title_activity_activity__splash">Snickers</string>
+    <string name="rotate">ROTATE</string>
+
+</resources>

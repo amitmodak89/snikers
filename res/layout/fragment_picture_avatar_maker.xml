@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/THEME_BROWN"
+    tools:context="com.mars.snickers.Fragment_PictureAvatarMaker" >
+
+    <FrameLayout
+        android:id="@+id/fpam_fl_imageContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fpam_ll_buttonContainer"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/THEME_BROWN" >
+
+        <!-- <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView -->
+        <ImageView
+            android:id="@+id/fpam_iv_touchImageView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            android:layout_marginBottom="20dip"
+            android:rotation="270"
+            
+             android:scaleType="matrix"
+             />
+
+        <com.mars.snickers.helper.ScaleImageView
+            android:id="@+id/fpam_iv_userPic"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            android:layout_marginBottom="20dip"
+            android:clickable="false" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/fpam_ll_propContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/gapx0.5"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/fpam_iv_char"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/fpam_iv_mood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gapx0.5" />
+
+        <ImageView
+            android:id="@+id/fpam_iv_prop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gapx0.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fpam_ll_buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/fpam_btn_chooseCharacter"
+            style="@style/button_state_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/chooseCharacter" />
+
+        <Button
+            android:id="@+id/fpam_btn_pickMood"
+            style="@style/button_state_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/pickMood" />
+
+        <Button
+            android:id="@+id/fpam_btn_chooseProp"
+            style="@style/button_state_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/chooseProp" />
+
+        <Button
+            android:id="@+id/fpam_btn_apply"
+            style="@style/button_state_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/apply" />
+    </LinearLayout>
+
+</RelativeLayout>

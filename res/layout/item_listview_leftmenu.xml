@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/illm_iv_menuitem"
+        android:layout_width="@dimen/gapx5"
+        android:layout_height="@dimen/gapx5"
+        android:layout_gravity="center_vertical|center_horizontal|center"
+        android:gravity="center|center_vertical|center_horizontal"
+        android:padding="@dimen/gapx1.5" />
+
+    <TextView
+        android:id="@+id/illm_tv_menuitem"
+        android:layout_width="@dimen/gapx5"
+        android:layout_height="@dimen/gapx5"
+        android:textStyle="bold"
+        android:layout_gravity="center_vertical|center_horizontal|center"
+        android:gravity="center|center_vertical|center_horizontal"
+        android:textColor="@color/THEME_YELLOW"
+        android:textSize="@dimen/gapx2"/>
+</FrameLayout>

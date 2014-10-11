@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- COMMON GAP -->
+    <dimen name="gapx0.25">2dp</dimen>
+    <dimen name="gapx0.5">4dp</dimen>
+    <dimen name="gapx0.75">6dp</dimen>
+    <dimen name="gap">8dp</dimen>
+    <dimen name="gapx1.5">12dp</dimen>
+    <dimen name="gapx2">16dp</dimen>
+    <dimen name="gapx2.5">20dp</dimen>
+    <dimen name="gapx3">24dp</dimen>
+    <dimen name="gapx4">32dp</dimen>
+    <dimen name="gapx5">40dp</dimen>
+<dimen name="fontSizeHeader">20dp</dimen>
+</resources>

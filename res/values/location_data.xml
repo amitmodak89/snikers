@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="locations">
+        <item>@string/TURKEY</item>
+        <item>@string/QATAR</item>
+        <item>@string/JORDAN</item>
+        <item>@string/UAE</item>
+        <item>@string/KUWAIT</item>
+        <item>@string/BAHRAIN</item>
+        <item>@string/OMAN</item>
+    </string-array>
+
+    <string-array name="locations_images">
+        <item>@drawable/turkey</item>
+        <item>@drawable/quatar</item>
+        <item>@drawable/jordan</item>
+        <item>@drawable/uae</item>
+        <item>@drawable/kuwait</item>
+        <item>@drawable/bahrain</item>
+        <item>@drawable/oman</item>
+    </string-array>
+
+    <string-array name="locations_language">
+        <item>tr</item>
+        <item>ar</item>
+        <item>ar</item>
+        <item>ar</item>
+        <item>ar</item>
+        <item>ar</item>
+        <item>ar</item>
+    </string-array>
+
+    <string-array name="locations_country">
+        <item>TR</item>
+        <item>QA</item>
+        <item>JO</item>
+        <item>AE</item>
+        <item>KW</item>
+        <item>BH</item>
+        <item>OM</item>
+    </string-array>
+
+    
+    <string-array name="city_list">
+        <item>ŞEHİR</item>
+        <item>Adana</item>
+        <item>Adıyaman</item>
+        <item>Afyonkarahisar</item>
+        <item>Ağrı</item>
+        <item>Amasya</item>
+        <item>Ankara</item>
+        <item>Antalya</item>
+        <item>Artvin</item>
+        <item>Aydın</item>
+        <item>Balıkesir</item>
+        <item>Bilecik</item>
+        <item>Bingöl</item>
+        <item>Bitlis</item>
+        <item>Bolu</item>
+        <item>Burdur</item>
+        <item>Bursa</item>
+        <item>Çanakkale</item>
+        <item>Çankırı</item>
+        <item>Çorum</item>
+        <item>Denizli</item>
+        <item>Diyarbakır</item>
+        <item>Edirne</item>
+        <item>Elazığ</item>
+        <item>Erzincan</item>
+        <item>Erzurum</item>
+        <item>Eskişehir</item>
+        <item>Gaziantep</item>
+        <item>Giresun</item>
+        <item>Gümüşhane</item>
+        <item>Hakkâri</item>
+        <item>Hatay</item>
+        <item>Isparta</item>
+        <item>Mersin</item>
+        <item>İstanbul</item>
+        <item>İzmir</item>
+        <item>Kars</item>
+        <item>Kastamonu</item>
+        <item>Kayseri</item>
+        <item>Kırklareli</item>
+        <item>Kırşehir</item>
+        <item>Kocaeli</item>
+        <item>Konya</item>
+        <item>Kütahya</item>
+        <item>Malatya</item>
+        <item>Manisa</item>
+        <item>Kahramanmaraş</item>
+        <item>Mardin</item>
+        <item>Muğla</item>
+        <item>Muş</item>
+        <item>Nevşehir</item>
+        <item>Niğde</item>
+        <item>Ordu</item>
+        <item>Rize</item>
+        <item>Sakarya</item>
+        <item>Samsun</item>
+        <item>Siirt</item>
+        <item>Sinop</item>
+        <item>Sivas</item>
+        <item>Tekirdağ</item>
+        <item>Tokat</item>
+        <item>Trabzon</item>
+        <item>Tunceli</item>
+        <item>Şanlıurfa</item>
+        <item>Uşak</item>
+        <item>Van</item>
+        <item>Yozgat</item>
+        <item>Zonguldak</item>
+        <item>Aksaray</item>
+        <item>Bayburt</item>
+        <item>Karaman</item>
+        <item>Kırıkkale</item>
+        <item>Batman</item>
+        <item>Şırnak</item>
+        <item>Bartın</item>
+        <item>Ardahan</item>
+        <item>Iğdır</item>
+        <item>Yalova</item>
+        <item>Karabük</item>
+        <item>Kilis</item>
+        <item>Osmaniye</item>
+        <item>Düzce</item>
+    </string-array>
+    
+</resources>

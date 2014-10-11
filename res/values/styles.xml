@@ -1,0 +1,70 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+
+    </style>
+
+    <style name="PopupMenu">
+        <item name="android:background">@color/THEME_BROWN</item>
+        <item name="android:textColor">@color/THEME_YELLOW</item>
+    </style>
+
+    <style name="edittext_style">
+        <item name="android:padding">@dimen/gapx0.5</item>
+        <item name="android:background">@drawable/edittext_background</item>
+        <item name="android:textColor">@color/THEME_YELLOW</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:textScaleX">1.2</item>
+    </style>
+
+    <style name="MyAppCompatDialogTheme" parent="AppTheme">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+<!--  AMIT CHANGE IN STYLE -->
+    <style name="button_style" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textColor">@color/THEME_BROWN</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#E2CC94</item>
+        <!-- <item name="android:shadowRadius">100</item> -->
+        <item name="android:textScaleX">1.0</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item  name="android:gravity">center|center_vertical|center_horizontal</item>
+    </style>
+
+    <style name="button_browse_style" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button_browse</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textScaleX">1.2</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+    </style>
+
+    <style name="button_state_style" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button_state</item>
+        <item name="android:textColor">@color/AMIT_THEME_DARK_ORANGE</item>
+        <item name="android:textStyle">bold</item>
+        <!-- <item name="android:textSize">@dimen/gapx1</item> -->
+    </style>
+ <style name="amit_txt_style_for_reg" parent="@android:style/Widget.TextView">
+        
+        <item name="android:textColor">@color/AMIT_THEME_LIGHT_PINK</item>
+        <item name="android:textSize">16dip</item>
+        <item name="android:textStyle">bold</item>
+        
+        
+    </style>
+</resources>

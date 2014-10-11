@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/THEME_BROWN"
+    android:orientation="vertical"
+    tools:context="com.mars.snickers.Fragment_Promise">
+
+
+    <ImageView
+        android:id="@+id/fp_iv_promiseImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gap"
+        android:layout_marginTop="@dimen/gap"
+        android:src="@drawable/hand" />
+
+    <TextView
+        android:id="@+id/fp_tv_promiseHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fp_iv_promiseImg"
+        android:layout_marginLeft="@dimen/gap"
+        android:layout_marginTop="@dimen/gap"
+        android:text="@string/promiseHeader"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/fp_sv_promiseText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fp_layout_bottombar"
+        android:layout_below="@+id/fp_tv_promiseHeader"
+        android:layout_marginTop="@dimen/gap"
+        android:paddingLeft="@dimen/gap"
+        android:paddingRight="@dimen/gap">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/promiseText"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white" />
+    </ScrollView>
+
+    <include
+        android:id="@+id/fp_layout_bottombar"
+        layout="@layout/proceed_bottombar" />
+
+
+</RelativeLayout>
