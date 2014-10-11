@@ -2,6 +2,7 @@ package com.mars.snickers;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,6 +14,8 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.ksoap2.serialization.PropertyInfo;
@@ -60,10 +63,12 @@ import com.facebook.model.OpenGraphAction;
 import com.facebook.model.OpenGraphObject;
 import com.facebook.widget.FacebookDialog;
 import com.facebook.widget.WebDialog;
+import com.facebook.widget.WebDialog.FeedDialogBuilder;
 import com.facebook.widget.WebDialog.OnCompleteListener;
 import com.mars.snickers.helper.FontManager;
 import com.mars.snickers.helper.ImageHelper;
 import com.mars.snickers.helper.InstagramController;
+import com.mars.snickers.helper.JSONParser;
 import com.mars.snickers.helper.SoapController;
 import com.mars.snickers.listners.IfacebookListener;
 import com.mars.snickers.listners.ItwitterListner;
@@ -110,11 +115,12 @@ public class Fragment_FinalScreen extends Fragment implements IfacebookListener 
 		View view = inflater.inflate(R.layout.fragment_finalscreen, container,
 				false);
 
-		File photo1=new File(Environment.getExternalStorageDirectory().getAbsolutePath(), getString(R.string.userAvatarFileName));
+		File photo1 = new File(Environment.getExternalStorageDirectory()
+				.getAbsolutePath(), getString(R.string.userAvatarFileName));
 		if (photo1.exists()) {
 			photo1.delete();
 		}
-		
+
 		avatarCreated = (ImageView) view
 				.findViewById(R.id.ffs_iv_avatarcreated);
 
@@ -142,55 +148,67 @@ public class Fragment_FinalScreen extends Fragment implements IfacebookListener 
 			@Override
 			public void onClick(View view) {
 				pendingPublishReauthorization = false;
-//				OpenGraphObject meal = OpenGraphObject.Factory
-//						.createForPost("cooking-app:meal");
-//				meal.setProperty("title", "Buffalo Tacos");
-//				meal.setProperty("image",
-//						"http://example.com/cooking-app/images/buffalo-tacos.png");
-//				meal.setProperty("url",
-//						"https://example.com/cooking-app/meal/Buffalo-Tacos.html");
-//				meal.setProperty("description",
-//						"Leaner than beef and great flavor.");
-//
-//				OpenGraphAction action = GraphObject.Factory
-//						.create(OpenGraphAction.class);
-//				action.setProperty("meal", meal);
-//
-//				FacebookDialog shareDialog = new FacebookDialog.OpenGraphActionDialogBuilder(
-//						getActivity(), action, "cooking-app:cook", "meal")
-//						.build();
-//				uiHelper.trackPendingDialogCall(shareDialog.present());
-//				publishStory();
+				// OpenGraphObject meal = OpenGraphObject.Factory
+				// .createForPost("cooking-app:meal");
+				// meal.setProperty("title", "Buffalo Tacos");
+				// meal.setProperty("image",
+				// "http://example.com/cooking-app/images/buffalo-tacos.png");
+				// meal.setProperty("url",
+				// "https://example.com/cooking-app/meal/Buffalo-Tacos.html");
+				// meal.setProperty("description",
+				// "Leaner than beef and great flavor.");
+				//
+				// OpenGraphAction action = GraphObject.Factory
+				// .create(OpenGraphAction.class);
+				// action.setProperty("meal", meal);
+				//
+				// FacebookDialog shareDialog = new
+				// FacebookDialog.OpenGraphActionDialogBuilder(
+				// getActivity(), action, "cooking-app:cook", "meal")
+				// .build();
+				// uiHelper.trackPendingDialogCall(shareDialog.present());
+				// publishStory();
 
-				if (FacebookDialog.canPresentShareDialog( getActivity().getApplicationContext(), 
-	                    FacebookDialog.ShareDialogFeature.SHARE_DIALOG)) {
-	// Publish the post using the Share Dialog
-	FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(getActivity())
+				if (FacebookDialog.canPresentShareDialog(getActivity()
+						.getApplicationContext(),
+						FacebookDialog.ShareDialogFeature.SHARE_DIALOG)) {
+					// Publish the post using the Share Dialog
+					FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(
+							getActivity())
 
-	.setName("Snickers")
-	.setCaption(getResources().getString(R.string.fb_share_title_t))
-	.setDescription(getResources().getString(R.string.fb_share_desc_t))
-	.setLink("http://snickers.com")
-	.setPicture("https://snickerspromo.dessertmoments.com/images/icon.jpg")
-	.build();
-	
-	
-	uiHelper.trackPendingDialogCall(shareDialog.present());
+							.setName("Snickers")
+							.setCaption(
+									getResources().getString(
+											R.string.fb_share_title_t))
+							.setDescription(
+									getResources().getString(
+											R.string.fb_share_desc_t))
+							.setLink("http://snickers.com")
+							.setPicture(
+									"https://snickerspromo.dessertmoments.com/images/icon.jpg")
+							.build();
 
-	} else {
-		if (!getFacebookSessionState()) {
-			openFacebookSession();
-		} else {
-		publishFeedDialog();
-		}
-	}
+					uiHelper.trackPendingDialogCall(shareDialog.present());
+
+				} else {
+					if (!getFacebookSessionState()) {
+						openFacebookSession();
+					} else {
+						try {
+							new getUrl().execute("");
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+				}
 				sendMessage = true;
-//				if (!fbListener.getFacebookSessionState()) {
-//					// openFacebookSession();
-//				} else {
-//
-//					// fbListener.setMessage("Testing");
-//				}
+				// if (!fbListener.getFacebookSessionState()) {
+				// // openFacebookSession();
+				// } else {
+				//
+				// // fbListener.setMessage("Testing");
+				// }
 			}
 		});
 
@@ -310,53 +328,55 @@ public class Fragment_FinalScreen extends Fragment implements IfacebookListener 
 			desc = getString(R.string.fb_share_desc);
 		}
 		emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, title);
-		
+
 		emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, desc);
 		emailIntent.setType("image/*");
-		
+
 		File photo = new File(getActivity().getFilesDir(),
 				getString(R.string.userAvatarFileName));
 		String path = null;
 		if (photo.exists()) {
 			path = photo.getAbsolutePath();
-		Bitmap bitmap = ImageHelper.decodeFile(path,
-				2 * ImageHelper.getDeviceWidth(getActivity()),
-				2 * ImageHelper.getDeviceHeight(getActivity()),
-				ImageHelper.ScalingLogic.FIT);
-//		File photo = new File(getActivity().getExternalFilesDir(
-//				Environment.DIRECTORY_PICTURES),
-//				getString(R.string.userAvatarFileName));
-		File photo1=new File(Environment.getExternalStorageDirectory().getAbsolutePath(), getString(R.string.userAvatarFileName));
-		if (photo1.exists()) {
-			photo1.delete();
-		}
-		FileOutputStream fos = null;
+			Bitmap bitmap = ImageHelper.decodeFile(path,
+					2 * ImageHelper.getDeviceWidth(getActivity()),
+					2 * ImageHelper.getDeviceHeight(getActivity()),
+					ImageHelper.ScalingLogic.FIT);
+			// File photo = new File(getActivity().getExternalFilesDir(
+			// Environment.DIRECTORY_PICTURES),
+			// getString(R.string.userAvatarFileName));
+			File photo1 = new File(Environment.getExternalStorageDirectory()
+					.getAbsolutePath(), getString(R.string.userAvatarFileName));
+			if (photo1.exists()) {
+				photo1.delete();
+			}
+			FileOutputStream fos = null;
 
-		try {
-			fos = new FileOutputStream(photo1);
-			bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
-		} catch (java.io.IOException e) {
-			Log.e("PictureDemo", "Exception in photoCallback", e);
-		} finally {
+			try {
+				fos = new FileOutputStream(photo1);
+				bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+			} catch (java.io.IOException e) {
+				Log.e("PictureDemo", "Exception in photoCallback", e);
+			} finally {
 
-			if (fos != null)
-				try {
-					bitmap.recycle();
-					fos.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-		}
-		if (photo1.exists()) {
-//			URI = Uri.fromFile(photo);
-			  URI = Uri.fromFile(photo1);
-		}
-		if (URI != null)
-			emailIntent.putExtra(Intent.EXTRA_STREAM, URI);
+				if (fos != null)
+					try {
+						bitmap.recycle();
+						fos.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+			}
+			if (photo1.exists()) {
+				// URI = Uri.fromFile(photo);
+				URI = Uri.fromFile(photo1);
+			}
+			if (URI != null)
+				emailIntent.putExtra(Intent.EXTRA_STREAM, URI);
 
-		startActivity(emailIntent);
+			startActivity(emailIntent);
+		}
 	}
-	}
+
 	class SavePhotoTask extends AsyncTask<String, String, String> {
 
 		@Override
@@ -365,10 +385,11 @@ public class Fragment_FinalScreen extends Fragment implements IfacebookListener 
 					2 * ImageHelper.getDeviceWidth(getActivity()),
 					2 * ImageHelper.getDeviceHeight(getActivity()),
 					ImageHelper.ScalingLogic.FIT);
-//			File photo = new File(getActivity().getExternalFilesDir(
-//					Environment.DIRECTORY_PICTURES),
-//					getString(R.string.userAvatarFileName));
-			File photo=new File(Environment.getExternalStorageDirectory().getAbsolutePath(), getString(R.string.userAvatarFileName));
+			// File photo = new File(getActivity().getExternalFilesDir(
+			// Environment.DIRECTORY_PICTURES),
+			// getString(R.string.userAvatarFileName));
+			File photo = new File(Environment.getExternalStorageDirectory()
+					.getAbsolutePath(), getString(R.string.userAvatarFileName));
 			if (photo.exists()) {
 				photo.delete();
 			}
@@ -760,10 +781,7 @@ public class Fragment_FinalScreen extends Fragment implements IfacebookListener 
 				// File imgPath = new File(a.toString());
 				File x = new File(getActivity().getFilesDir(),
 						getString(R.string.userAvatarFileName));
-				// RandomAccessFile f = new RandomAccessFile(, "r");
-				// byte[] bytes =
-				// org.apache.commons.io.FileUtils.readFileToByteArray new
-				// byte[(int) x.length()];
+			
 				byte[] data;
 				RandomAccessFile f = new RandomAccessFile(x, "r");
 				try {
@@ -839,72 +857,100 @@ public class Fragment_FinalScreen extends Fragment implements IfacebookListener 
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
 		outState.putBoolean(PENDING_PUBLISH_KEY, pendingPublishReauthorization);
-	    uiHelper.onSaveInstanceState(outState);
+		uiHelper.onSaveInstanceState(outState);
 	}
-	
-	
-	private void publishFeedDialog() {
-	    Bundle params = new Bundle();
-	    params.putString("name", "Snickers");
-	    params.putString("caption",
+
+	private void publishFeedDialog(String url) throws IOException {
+		File x = new File(getActivity().getFilesDir(),
+				getString(R.string.userAvatarFileName));
+		// RandomAccessFile f = new RandomAccessFile(, "r");
+		// byte[] bytes =
+		// org.apache.commons.io.FileUtils.readFileToByteArray new
+		// byte[(int) x.length()];
+		byte[] data = null;
+		RandomAccessFile f = null;
+		try {
+			f = new RandomAccessFile(x, "r");
+
+			// Get and check length
+			long longlength = f.length();
+			int length = (int) longlength;
+			if (length != longlength)
+				throw new IOException("File size >= 2 GB");
+			// Read file and return data
+			data = new byte[length];
+			f.readFully(data);
+			// return data;
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			f.close();
+		}
+
+		Bundle params = new Bundle();
+		params.putString("name", "Snickers");
+		params.putString("caption",
 				getResources().getString(R.string.fb_share_title_t));
-	    params.putString("description",
+		params.putString("description",
 				getResources().getString(R.string.fb_share_desc_t));
-	    params.putString("link", "http://snickers.com");
-	    params
-				.putString("picture",
-						"https://snickerspromo.dessertmoments.com/images/icon.jpg");
+		params.putString("link", "http://snickers.com");
+		params.putString("picture",
+				url);
+		// params.putByteArray("picture", data);
 
-	    WebDialog feedDialog = (
-	        new WebDialog.FeedDialogBuilder(getActivity(),
-	            Session.getActiveSession(),
-	            params))
-	        .setOnCompleteListener(new OnCompleteListener() {
+		WebDialog feedDialog = (new WebDialog.FeedDialogBuilder(getActivity(),
+				Session.getActiveSession(), params)).setOnCompleteListener(
+				new OnCompleteListener() {
 
-	            @Override
-	            public void onComplete(Bundle values,
-	                FacebookException error) {
-	                if (error == null) {
-	                    // When the story is posted, echo the success
-	                    // and the post Id.
-	                    final String postId = values.getString("post_id");
-	                    if (postId != null) {
-	                        Toast.makeText(getActivity(),
-	                            "Thank You!",
-	                            Toast.LENGTH_SHORT).show();
-	                    } else {
-	                        // User clicked the Cancel button
-	                        Toast.makeText(getActivity().getApplicationContext(), 
-	                            "Publish cancelled", 
-	                            Toast.LENGTH_SHORT).show();
-	                    }
-	                } else if (error instanceof FacebookOperationCanceledException) {
-	                    // User clicked the "x" button
-	                    Toast.makeText(getActivity().getApplicationContext(), 
-	                        "Publish cancelled", 
-	                        Toast.LENGTH_SHORT).show();
-	                } else {
-	                    // Generic, ex: network error
-	                    Toast.makeText(getActivity().getApplicationContext(), 
-	                        "Error posting story", 
-	                        Toast.LENGTH_SHORT).show();
-	                }
-	            }
+					@Override
+					public void onComplete(Bundle values,
+							FacebookException error) {
+						if (error == null) {
+							// When the story is posted, echo the success
+							// and the post Id.
+							final String postId = values.getString("post_id");
+							if (postId != null) {
+								Toast.makeText(getActivity(), "Thank You!",
+										Toast.LENGTH_SHORT).show();
+							} else {
+								// User clicked the Cancel button
+								Toast.makeText(
+										getActivity().getApplicationContext(),
+										"Publish cancelled", Toast.LENGTH_SHORT)
+										.show();
+							}
+						} else if (error instanceof FacebookOperationCanceledException) {
+							// User clicked the "x" button
+							Toast.makeText(
+									getActivity().getApplicationContext(),
+									"Publish cancelled", Toast.LENGTH_SHORT)
+									.show();
+						} else {
+							// Generic, ex: network error
+							Toast.makeText(
+									getActivity().getApplicationContext(),
+									"Error posting story", Toast.LENGTH_SHORT)
+									.show();
+						}
+					}
 
-	        })
-	        .build();
-	    feedDialog.show();
+				}).build();
+		feedDialog.show();
 	}
 
-    @Override
-    public boolean getFacebookSessionState() {
-        return Session.getActiveSession().getState().isOpened();
-    }
+	@Override
+	public boolean getFacebookSessionState() {
+		return Session.getActiveSession().getState().isOpened();
+	}
 
 	@Override
 	public void setUser(GraphUser user) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -916,7 +962,7 @@ public class Fragment_FinalScreen extends Fragment implements IfacebookListener 
 	@Override
 	public void handlePendingFbAction() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -928,13 +974,73 @@ public class Fragment_FinalScreen extends Fragment implements IfacebookListener 
 	@Override
 	public void setImagePath(String imagePath) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void setMessage(String message) {
 		// TODO Auto-generated method stub
+
+	}
+	public class getUrl extends AsyncTask<String , String, String>
+	{
+		JSONObject json = null;
+	@Override
+	protected String doInBackground(String... params) {
+		
+JSONParser jsonParser = new JSONParser();
+		try {
+
+			File x = new File(getActivity().getFilesDir(),
+					getString(R.string.userAvatarFileName));
+		
+			byte[] data;
+			RandomAccessFile f = new RandomAccessFile(x, "r");
+			try {
+				// Get and check length
+				long longlength = f.length();
+				int length = (int) longlength;
+				if (length != longlength)
+					throw new IOException("File size >= 2 GB");
+				// Read file and return data
+				data = new byte[length];
+				f.readFully(data);
+				// return data;
+			} finally {
+				f.close();
+			}
+			String encodedImage = Base64.encodeToString(data, Base64.DEFAULT);
+			List<NameValuePair> params1 = new ArrayList<NameValuePair>();
+			params1.add(new BasicNameValuePair("file", encodedImage));
+			
+			json = jsonParser.getJSONFromUrl("http://webappex.com/snickers/image.php",params1);
+			Log.e("JSON", json.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return json.toString();
+		}
+
+	/* (non-Javadoc)
+	 * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
+	 */
+	@Override
+	protected void onPostExecute(String result) {
+		// TODO Auto-generated method stub
+		super.onPostExecute(result);
+		
+		String url = json.optString("image_url");
+		try {
+			if(url == "")
+				url = "https://snickerspromo.dessertmoments.com/images/icon.jpg";
+			publishFeedDialog(url);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 	
+	
+	}
 }

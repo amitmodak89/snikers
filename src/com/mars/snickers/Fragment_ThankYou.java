@@ -20,6 +20,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.FacebookException;
+import com.facebook.FacebookOperationCanceledException;
 import com.facebook.FacebookRequestError;
 import com.facebook.HttpMethod;
 import com.facebook.Request;
@@ -28,7 +30,11 @@ import com.facebook.Response;
 import com.facebook.Session;
 import com.facebook.SessionLoginBehavior;
 import com.facebook.SessionState;
+import com.facebook.UiLifecycleHelper;
 import com.facebook.model.GraphUser;
+import com.facebook.widget.FacebookDialog;
+import com.facebook.widget.WebDialog;
+import com.facebook.widget.WebDialog.OnCompleteListener;
 import com.mars.snickers.helper.FontManager;
 import com.mars.snickers.helper.SoapController;
 import com.mars.snickers.listners.IfacebookListener;
@@ -57,7 +63,7 @@ import java.util.List;
 public class Fragment_ThankYou extends Fragment {
     public final String TAG = "Fragment_ThankYou";
 
-
+    private UiLifecycleHelper uiHelper;
     private Button playGame, home;
     private TextView header, name, message;//, share;
     private ImageView fb, twtr;
@@ -90,6 +96,9 @@ public class Fragment_ThankYou extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_thank_you, container, false);
+        uiHelper = new UiLifecycleHelper(getActivity(), null);
+	    uiHelper.onCreate(savedInstanceState);
+	   
         playGame = (Button) view.findViewById(R.id.fty_btn_playGame);
         playGame.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,11 +133,33 @@ public class Fragment_ThankYou extends Fragment {
         fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!fbListener.getFacebookSessionState()) {
-                    openFacebookSession();
-                } else {
-                    fbListener.setMessage("Testing");
-                }
+//                if (!fbListener.getFacebookSessionState()) {
+//                    openFacebookSession();
+//                } else {
+//                    fbListener.setMessage("Testing");
+//                }
+            	if (FacebookDialog.canPresentShareDialog(getActivity().getApplicationContext(), 
+                        FacebookDialog.ShareDialogFeature.SHARE_DIALOG)) {
+    // Publish the post using the Share Dialog
+    FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(getActivity())
+
+    .setName("Snickers")
+    .setCaption(getResources().getString(R.string.fb_share_title_t))
+    .setDescription(getResources().getString(R.string.fb_share_desc_t))
+    .setLink("http://snickers.com")
+    .setPicture("https://snickerspromo.dessertmoments.com/images/icon.jpg")
+    .build();
+    uiHelper.trackPendingDialogCall(shareDialog.present());
+
+    } else {
+    	if (!fbListener.getFacebookSessionState()) {
+    		openFacebookSession();
+    	} else {
+    	publishFeedDialog();
+    	}
+    // Fallback. For example, publish the post using the Feed Dialog
+    	
+    }
             }
         });
         twtr = (ImageView) view.findViewById(R.id.fty_iv_twitter);
@@ -381,6 +412,9 @@ public class Fragment_ThankYou extends Fragment {
 					return;
 				}
 
+				
+				
+				
 				Bundle postParams = new Bundle();
 				postParams.putString("name",
 						getString(R.string.fb_share_title));
@@ -425,5 +459,56 @@ public class Fragment_ThankYou extends Fragment {
 			e.printStackTrace();
 		}
 	}
+	private void publishFeedDialog() {
+	    Bundle params = new Bundle();
+	    params.putString("name", "Snickers");
+	    params.putString("caption",
+				getResources().getString(R.string.fb_share_title_t));
+	    params.putString("description",
+				getResources().getString(R.string.fb_share_desc_t));
+	    params.putString("link", "http://snickers.com");
+	    params
+				.putString("picture",
+						"https://snickerspromo.dessertmoments.com/images/icon.jpg");
 
+	    WebDialog feedDialog = (
+	        new WebDialog.FeedDialogBuilder(getActivity(),
+	            Session.getActiveSession(),
+	            params))
+	        .setOnCompleteListener(new OnCompleteListener() {
+
+	            @Override
+	            public void onComplete(Bundle values,
+	                FacebookException error) {
+	                if (error == null) {
+	                    // When the story is posted, echo the success
+	                    // and the post Id.
+	                    final String postId = values.getString("post_id");
+	                    if (postId != null) {
+	                        Toast.makeText(getActivity(),
+	                            "Thank You!",
+	                            Toast.LENGTH_SHORT).show();
+	                    } else {
+	                        // User clicked the Cancel button
+	                        Toast.makeText(getActivity().getApplicationContext(), 
+	                            "Publish cancelled", 
+	                            Toast.LENGTH_SHORT).show();
+	                    }
+	                } else if (error instanceof FacebookOperationCanceledException) {
+	                    // User clicked the "x" button
+	                    Toast.makeText(getActivity().getApplicationContext(), 
+	                        "Publish cancelled", 
+	                        Toast.LENGTH_SHORT).show();
+	                } else {
+	                    // Generic, ex: network error
+	                    Toast.makeText(getActivity().getApplicationContext(), 
+	                        "Error posting story", 
+	                        Toast.LENGTH_SHORT).show();
+	                }
+	            }
+
+	        })
+	        .build();
+	    feedDialog.show();
+	}
 }
